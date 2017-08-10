@@ -1,0 +1,75 @@
+#!/bin/bash
+mkdir MoVRs
+
+
+#BLAST
+	mkdir BLAST; cd BLAST
+	wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.6.0+-x64-linux.tar.gz
+	tar -xzf ncbi-blast-2.6.0+-x64-linux.tar.gz
+	cd ncbi-blast-2.6.0+/bin
+	cp * /usr/local/bin/
+	cd ../../..
+
+
+cd MoVRs
+#BLAT
+	mkdir BLAT; cd BLAT
+	wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/blat
+	chmod a+x blat
+	cp blat /usr/local/bin
+	cd ..
+
+#GHOSTSCRIPT
+	mkdir GHOSTSCRIPT; cd GHOSTSCRIPT
+	wget https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs921/ghostscript-9.21-linux-x86_64.tgz
+	tar -xzf ghostscript-9.21-linux-x86_64.tgz
+	chown -R root:root ghostscript-9.21-linux-x86_64
+	cd ghostscript-9.21-linux-x86_64
+	chmod a+x gs-921-linux-x86_64
+	cp gs-921-linux-x86_64 /usr/local/bin/gs
+	cd ../..
+
+#MEME
+	mkdir MEME; cd MEME
+	wget http://meme-suite.org/meme-software/4.12.0/meme_4.12.0.tar.gz
+	tar -xzf meme_4.12.0.tar.gz
+	cd meme_4.12.0
+	./configure --prefix=/usr/local/src/MoVRs/MEME/meme_4.12.0 \
+		 --enable-build-libxml2 --enable-build-libxslt --with-url="http://meme-suite.org"
+	make
+	make test
+	make install
+	cd ../..
+	
+#WEBLOGO
+	mkdir WEBLOGO; cd WEBLOGO
+	wget http://weblogo.berkeley.edu/release/weblogo.2.8.2.tar.gz
+	tar -xzf weblogo.2.8.2.tar.gz 
+	cd ..
+
+#HOMER
+	mkdir HOMER; cd HOMER
+	wget http://homer.salk.edu/homer/configureHomer.pl
+	cpanm HTML::Template
+	cpanm JSON
+	cpanm XML::Simple
+	cpanm XML::Compile::SOAP11
+	cpanm XML::Compile::WSDL11
+	cpanm XML::Compile::Transport::SOAPHTTP
+	cpanm Log::Log4perl
+	cpanm Math::CDF
+	pip install --upgrade networkx
+	perl configureHomer.pl -install homer >& err
+	chmod -R a+w data
+	cd ..
+
+#ANACONDA
+	wget https://repo.continuum.io/archive/Anaconda2-4.1.1-Linux-x86_64.sh
+	bash Anaconda2-4.1.1-Linux-x86_64.sh
+## ... install into directory /usr/local/src/anaconda2
+
+#MoVRs
+	git clone https://github.com/brendelgroup/MoVRs.git
+	cd MoVRs/scripts
+	xcheckprerequisites
+	cd ../..

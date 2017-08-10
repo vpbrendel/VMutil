@@ -1,0 +1,9 @@
+#xrandr -s 1920x1080
+#scp -r grendel.soic.indiana.edu:4VM/VMutil ./
+
+source VMutil/bgRAMOSE-specific/0README 
+VMutil/xstartoverJS 
+
+source .profile
+
+#... Follow the instructions in ulsUbuntu/0README

@@ -1,0 +1,12 @@
+cd
+\rm -rf Music Pictures Templates Videos
+mkdir bin fct
+
+### Set up the bash environment in a nice way:
+#
+cat ~vbrendel/VMutil/Jetstream/profile_more  >>  ~vbrendel/.profile
+cat ~vbrendel/VMutil/Jetstream/bashrc_more   >>  ~vbrendel/.bashrc
+cp  ~vbrendel/VMutil/Jetstream/bash_aliases      ~vbrendel/.bash_aliases
+cp  ~vbrendel/VMutil/Jetstream/bashrc_su         ~vbrendel/.bashrc_su
+
+source ~vbrendel/.profile

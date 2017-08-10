@@ -1,0 +1,37 @@
+#!/bin/bash
+mkdir GoRAMPAGE
+cd GoRAMPAGE
+
+
+	git clone https://github.com/brwnj/fastq-multx.git
+	cd fastq-multx/
+	make
+	cp fastq-multx /usr/local/bin/
+	cd ..
+
+	git clone https://github.com/agordon/fastx_toolkit.git
+	cd fastx_toolkit/
+	./reconf
+	./configure
+	make
+	make install
+	cd  ..
+
+	mkdir TagDust
+	cd TagDust 
+	wget https://sourceforge.net/projects/tagdust/files/latest/download
+	mv download tagdust-2.33.tar.gz
+	tar -xzf tagdust-2.33.tar.gz 
+	cd tagdust-2.33/
+	./configure
+	make
+	make check
+	make install
+	cd ../..
+
+	git clone https://github.com/alexdobin/STAR.git
+	cd STAR
+	cd source
+	make STAR
+	cp STAR /usr/local/bin
+	cd ../..

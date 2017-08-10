@@ -1,0 +1,72 @@
+#!/bin/bash
+mkdir BWASP
+cd BWASP
+
+
+	mkdir BISMARK; cd BISMARK
+	wget http://www.bioinformatics.babraham.ac.uk/projects/bismark/bismark_v0.18.1.tar.gz
+	tar -xzf bismark_v0.18.1.tar.gz
+	cd bismark_v0.18.1/
+ 	cp bam2nuc bismark bismark2* bismark_genome_preparation bismark_methylation_extractor coverage2cytosine deduplicate_bismark /usr/local/bin/
+	cd ../..
+
+	mkdir BOWTIE2; cd BOWTIE2
+	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.2/bowtie2-2.3.2-linux-x86_64.zip/download
+	mv download bowtie2-2.3.2-linux-x86_64.zip
+	unzip bowtie2-2.3.2-linux-x86_64.zip
+	cd bowtie2-2.3.2/
+ 	cp bowtie2* /usr/local/bin/
+	cd ../..
+
+	mkdir FASTQC; cd FASTQC
+	wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
+	unzip fastqc_v0.11.5.zip
+	cd FastQC
+	chmod a+x fastqc
+	cd ../..
+
+	mkdir SAMTOOLS; cd SAMTOOLS
+	git clone git://github.com/samtools/htslib.git htslib
+	cd htslib
+	make
+	cd ..
+	git clone git://github.com/samtools/samtools.git samtools
+	cd samtools
+	make
+ 	cp samtools /usr/local/bin
+	cd ../..
+
+	mkdir SRATOOLKIT; cd SRATOOLKIT
+	wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
+	tar -xzf sratoolkit.current-ubuntu64.tar.gz
+	cd ..
+
+	mkdir TRIM_GALORE; cd TRIM_GALORE
+	wget http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/trim_galore_v0.4.4.zip
+	unzip trim_galore_v0.4.4.zip
+	pip install --upgrade cutadapt
+	cd ..
+
+	mkdir GENOMETOOLS; cd GENOMETOOLS
+	curl -O http://genometools.org/pub/genometools-1.5.9.tar.gz
+	tar -xzf genometools-1.5.9.tar.gz 
+	cd genometools-1.5.9/
+	make
+	make install
+	cd ../..
+
+	git clone https://github.com/BrendelGroup/AEGeAn.git
+	cd AEGeAn/
+	make
+	make install
+	make install-scripts
+	cd ..
+
+	git clone https://github.com/brendelgroup/BWASP
+	cd BWASP/bin
+	cp ../../AEGeAn/bin/canon-gff3 ../../AEGeAn/bin/pmrna ./
+	cpanm Math::Pari
+	xcheckprerequisites
+	cd ../..
+
+cd ..

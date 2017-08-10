@@ -1,0 +1,19 @@
+# Alias definitions
+
+alias cp='cp -i'
+alias duh='du -H --max-depth=1'
+alias find1d='find . -mtime -1 -print | more'
+alias find2d='find . -mtime -2 -print | more'
+alias find3d='find . -mtime -3 -print | more'
+alias find3h='find . -mmin -180 -print | more'
+alias home='clear; cd; echo "$HOSTNAME"; pwd; echo""; ls; echo""; date; echo ""'
+alias ls='ls --color'
+alias lsf='ls -F'
+alias lst='ls -lt'
+alias lstg='ls -lt --block-size=G'
+alias lstm='ls -lt --block-size=M'
+alias mv='mv -i'
+alias rm='rm -i' 
+alias sudobash='sudo bash -c "clear; echo \"$HOSTNAME\"; pwd; echo\"\"; ls; echo\"\"; date; echo\"\"; bash --rcfile ~vbrendel/.bashrc_su"'
+alias swd='clear; echo "$HOSTNAME"; pwd; echo""; ls; echo""; date; echo""'
+function texclean() { \rm *.aux *.bbl *.blg *.dvi *.log *.toc; \rm */*.aux */*.bbl */*.blg */*.dvi */*.log */*.toc; }

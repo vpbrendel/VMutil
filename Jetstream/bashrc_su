@@ -1,0 +1,20 @@
+# .bashrc_su
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+PS1="[sudo \#]#"
+
+# PATH
+
+# DEFAULT PATH:	/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PATH=.:$PATH
+
+# Alias definitions
+
+if [ -f ~vbrendel/.bash_aliases ]; then
+    . ~vbrendel/.bash_aliases
+fi

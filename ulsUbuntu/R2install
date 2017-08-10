@@ -1,0 +1,9 @@
+source("https://bioconductor.org/biocLite.R")
+biocLite(c("AnnotationHub", "BiocGenerics", "BiocParallel",
+ "ENCODExplorer",  "GenomicAlignments", "GenomeInfoDb",
+ "GenomicRanges", "IRanges",
+ "Rsamtools", "rtracklayer", "S4Vectors",
+ "SummarizedExperiment"))
+
+biocLite("TSRchitect")
+biocLite("seqLogo")

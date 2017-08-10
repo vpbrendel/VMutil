@@ -1,0 +1,33 @@
+
+
+
+# User specific environment and startup programs
+
+# The following sets the maximum size of core files created:
+ulimit -c 0
+
+BASH_ENV=$HOME/.bashrc
+
+# DEFAULT PATH:
+#	/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PATH=.:$PATH:$HOME/bin:$HOME/fct
+
+USERNAME="vbrendel"
+
+export BASH_ENV PATH USERNAME
+
+
+# DISPLAY FOR NEW TERMINAL
+#
+echo "Hostname: $HOSTNAME"
+echo ""
+echo "Path: $PATH"
+echo ""
+echo "Current directory and contents:"
+echo ""
+pwd; echo ""; ls; echo ""; date; echo "";
+
+
+# bgRAMOSE-Image specific:
+#
+cat /etc/motd.bgRAMOSE
