@@ -1,0 +1,11 @@
+cp /usr/local/src/GoRAMPAGE/GoRAMPAGE/demo/MMB/scripts/prep_script ./
+prep_script 
+
+cp /usr/local/src/GoRAMPAGE/GoRAMPAGE/demo/MMB/scripts/GoRAMPAGE_script_MMB.sh ./
+sed -e "s/<enter full path to GoRAMPAGE directory> ## please change before proceeding/\/usr\/local\/src\/GoRAMPAGE\/GoRAMPAGE/" GoRAMPAGE_script_MMB.sh | sed -e "s/<enter full to your work directory> ## please change before proceeding/\/vol_b\/DATA\/MMB/" > myGoRAMPAGE_MMB.sh
+chmod a+x myGoRAMPAGE_MMB.sh
+myGoRAMPAGE_MMB.sh 
+
+cp /usr/local/src/GoRAMPAGE/GoRAMPAGE/demo/MMB/scripts/TSRchitect_serial_MMB.R ./
+sed -e "s/WORKDIR/\/vol_b\/DATA\/MMB/" TSRchitect_serial_MMB.R | sed -e "s/GoRAMPAGEhome\/demo/\/usr\/local\/src\/GoRAMPAGE\/GoRAMPAGE\/demo/" > myTSRchitect_MMB.R
+Rscript myTSRchitect_MMB.R

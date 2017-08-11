@@ -69,4 +69,6 @@ cd BWASP
 	xcheckprerequisites
 	cd ../..
 
+	git clone https://github.com/brendelgroup/BWASPR
+	R CMD INSTALL BWASPR
 cd ..
