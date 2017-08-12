@@ -35,3 +35,9 @@ cd GoRAMPAGE
 	make STAR
 	cp STAR /usr/local/bin
 	cd ../..
+
+	git clone https://github.com/GoRAMPAGE
+	cd GoRAMPAGE
+	cd scripts
+	xcheckprerequisites
+	cd ../..
