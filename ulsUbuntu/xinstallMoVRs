@@ -1,23 +1,14 @@
 #!/bin/bash
 mkdir MoVRs
+cd MoVRs
 
 
 #BLAST
-	mkdir BLAST; cd BLAST
-	wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.6.0+-x64-linux.tar.gz
-	tar -xzf ncbi-blast-2.6.0+-x64-linux.tar.gz
-	cd ncbi-blast-2.6.0+/bin
-	cp * /usr/local/bin/
-	cd ../../..
+#... installed by xinstallALN
 
-
-cd MoVRs
 #BLAT
-	mkdir BLAT; cd BLAT
-	wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/blat
-	chmod a+x blat
-	cp blat /usr/local/bin
-	cd ..
+#... installed by xinstallALN
+
 
 #GHOSTSCRIPT
 	mkdir GHOSTSCRIPT; cd GHOSTSCRIPT

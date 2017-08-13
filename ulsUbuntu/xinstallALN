@@ -1,0 +1,110 @@
+#!/bin/bash
+mkdir ALN_DIR
+cd ALN_DIR
+
+
+#BLAST
+	mkdir BLAST; cd BLAST
+	wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.6.0+-x64-linux.tar.gz
+	tar -xzf ncbi-blast-2.6.0+-x64-linux.tar.gz
+	cd ncbi-blast-2.6.0+/bin
+	cp * /usr/local/bin/
+	cd ../../..
+
+#BLAT
+	mkdir BLAT; cd BLAT
+	wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/blat
+	chmod a+x blat
+	cp blat /usr/local/bin
+	cd ..
+
+#CLUSTALW
+	mkdir CLUSTALW
+	cd CLUSTALW
+	wget http://www.clustal.org/download/current/clustalw-2.1.tar.gz
+	tar -xzf clustalw-2.1.tar.gz
+	cd clustalw-2.1/
+	./configure
+	make
+	cp src/clustalw2 /usr/local/bin/clustalw
+	cd ../..
+
+#HMMER
+	mkdir HMMER
+	cd HMMER
+	wget http://eddylab.org/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-x86_64.tar.gz
+	tar -xzf hmmer-3.1b2-linux-intel-x86_64.tar.gz
+	cd hmmer-3.1b2-linux-intel-x86_64/
+	./configure
+	make
+	make check
+	make install
+	cd ../..
+
+#LASTZ
+	mkdir LASTZ
+	cd LASTZ
+	wget http://www.bx.psu.edu/~rsharris/lastz/lastz-1.04.00.tar.gz
+	tar -xzf lastz-1.04.00.tar.gz
+	cd lastz-distrib-1.04.00/
+	make
+	make install
+	cp bin/* /usr/local/bin
+	cd ../..
+
+#MCL
+	mkdir MCL
+	cd MCL
+	wget http://micans.org/mcl/src/mcl-14-137.tar.gz
+	tar -xzf mcl-14-137.tar.gz
+	cd mcl-14-137/
+	./configure
+	make
+	make check
+	make install
+	cd ../..
+
+#MUSCLE
+	mkdir MUSCLE
+	cd MUSCLE
+	wget http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
+	tar -xzf muscle3.8.31_i86linux64.tar.gz
+	cp muscle3.8.31_i86linux64 /usr/local/bin/muscle
+	cd ..
+
+#OrthoMCL
+	mkdir OrthoMCL
+	cd OrthoMCL
+	wget http://orthomcl.org/common/downloads/software/v2.0/orthomclSoftware-v2.0.9.tar.gz
+	tar -xzf orthomclSoftware-v2.0.9.tar.gz
+#NOTE:	Use of this program requires that you set up MySQL:
+#SEE:	documents in orthomclSoftware-v2.0.9/doc/OrthoMCLEngine/Main
+#		sudo apt-get install mysql-server
+#		sudo mysql_secure_installation
+	cd ..
+
+#VMATCH
+	mkdir VMATCH
+	cd VMATCH
+	wget http://www.vmatch.de/distributions/vmatch-2.3.0-Linux_x86_64-64bit.tar.gz
+	tar -xzf vmatch-2.3.0-Linux_x86_64-64bit.tar.gz
+	ln -s vmatch-2.3.0-Linux_x86_64-64bit vmatch.distribution
+
+	chown -R root:users vmatch.distribution
+	chmod a-s vmatch.distribution
+	chmod a+x vmatch.distribution
+	chmod a+r vmatch.distribution
+
+	cd vmatch.distribution
+	chmod a+r chain2dim cleanpp.sh matchcluster mkdna6idx mkvtree repfind.pl upgradeprj.pl vendian vmatch vmatchselect Vmatchtrans.pl vmigrate.sh vseqinfo vseqselect vstree2tex vsubseqselect
+	chmod a+x chain2dim cleanpp.sh matchcluster mkdna6idx mkvtree repfind.pl upgradeprj.pl vendian vmatch vmatchselect Vmatchtrans.pl vmigrate.sh vseqinfo vseqselect vstree2tex vsubseqselect
+	chmod a+r *pdf README.distrib SELECT TRANS
+	chmod a+x SELECT TRANS
+	cd SELECT
+	chmod a+r *
+	cd ../TRANS
+	chmod a+r *
+	cd ..
+
+	\cp chain2dim cleanpp.sh matchcluster mkdna6idx mkvtree repfind.pl vendian vmatch vmatchselect vmigrate.sh vseqinfo vseqselect vstree2tex vsubseqselect  /usr/local/bin/
+	cd ../..
