@@ -1,0 +1,34 @@
+#!/bin/bash
+mkdir NGS_DIR
+cd NGS_DIR
+
+
+#Discovar
+	mkdir Discovar
+	cd Discovar/
+	wget ftp://ftp.broadinstitute.org/pub/crd/Discovar/latest_source_code/LATEST_VERSION.tar.gz 
+	tar -xzf LATEST_VERSION.tar.gz 
+	cd discovar-52488/
+	./configure
+	make all
+	make install
+	make clean
+	cd ../..
+
+#DiscovarDeNovo
+	mkdir DiscovarDeNovo
+	cd DiscovarDeNovo/
+	wget ftp://ftp.broadinstitute.org/pub/crd/DiscovarDeNovo/latest_source_code/LATEST_VERSION.tar.gz 
+	tar -xzf LATEST_VERSION.tar.gz 
+	cd discovardenovo-52488/
+	./configure
+	make all
+	make install
+	make clean
+	cd ../..
+
+#Picard
+	mkdir Picard
+	cd Picard
+	wget https://github.com/broadinstitute/picard/releases/download/2.10.9/picard.jar
+	cd ..

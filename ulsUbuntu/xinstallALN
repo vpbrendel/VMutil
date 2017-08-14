@@ -18,6 +18,16 @@ cd ALN_DIR
 	cp blat /usr/local/bin
 	cd ..
 
+#CDHIT
+	git clone https://github.com/weizhongli/cdhit.git
+	cd cdhit
+	make
+	make install
+	cd cd-hit-auxtools/
+	make
+	cp cd-hit-dup cd-hit-dup-PE-out.pl cd-hit-lap read-linker /usr/local/bin
+	cd ../..
+
 #CLUSTALW
 	mkdir CLUSTALW
 	cd CLUSTALW

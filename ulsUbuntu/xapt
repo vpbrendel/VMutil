@@ -16,6 +16,7 @@ apt-get install libcurl4-openssl-dev
 apt-get install libncurses5 libncurses5-dev
 apt-get install libpango1.0 libpango1.0-dev
 apt-get install libgtextutils0 libgtextutils-dev
+apt-get install libjemalloc-dev
 apt-get install libssl-dev
 apt-get install libtool
 apt-get install libxml2-dev
@@ -23,6 +24,7 @@ apt-get install parallel
 apt-get install python-cairo python-gi-cairo
 apt-get install python-dev python-pip
 apt-get install python-matplotlib python-numpy python-scipy
+apt-get install python-pydot graphviz  
 apt-get install zip
 apt-get install zlib1g-dev
 
