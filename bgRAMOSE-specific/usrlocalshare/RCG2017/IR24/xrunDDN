@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# This script is an example of running a DISCOVAR de novo assembly.
+
+myreads=./IR24reads/IR24reads.txt
+target=./IR24ddnAssembly
+tmp=$target/tmp
+options="NUM_THREADS=22 MAX_MEM_GB=118"
+
+if [ -d $target ]
+then
+    echo 1>&2 "output directory $target already exists; please delete it or move it aside first."
+    exit 1
+fi
+
+{ mkdir -p $target && mkdir -p $tmp; } || { echo 1>&2 "failed to make directories... no permissions?" ; exit 1; }
+
+cmd="DiscovarDeNovo ${options} READS=@${myreads} OUT_DIR=${target}"
+
+echo "running $cmd"
+eval $cmd
+
+if (( $? == 0 ))
+then
+    echo "DiscovarDeNovo has completed correctly.  See the output in $target"
+    exit 0
+else
+    echo "DiscovarDeNovo has failed for some reason.  Please look for error messages above."
+    exit 1
+fi
