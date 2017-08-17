@@ -1,0 +1,14 @@
+#Linking the original fastq archives to simple names:
+#
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R1_001.fastq.gz IR24ddn1-001_1.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R1_002.fastq.gz IR24ddn1-002_1.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R1_003.fastq.gz IR24ddn1-003_1.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R1_004.fastq.gz IR24ddn1-004_1.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R1_005.fastq.gz IR24ddn1-005_1.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R1_006.fastq.gz IR24ddn1-006_1.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R3_001.fastq.gz IR24ddn1-001_2.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R3_002.fastq.gz IR24ddn1-002_2.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R3_003.fastq.gz IR24ddn1-003_2.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R3_004.fastq.gz IR24ddn1-004_2.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R3_005.fastq.gz IR24ddn1-005_2.fastq.gz
+ln -s ./SRADIR/IR24_GTCTGTCAATCT_L002_R3_006.fastq.gz IR24ddn1-006_2.fastq.gz

@@ -1,0 +1,19 @@
+mkdir SRADIR
+cd SRADIR
+scp grendel.soic.indiana.edu:/DATA/GROUP/huangcy/160722NH_DNASEQ/Sample_IR24/* ./
+cd ..
+xln
+time make -j 12 -f Makefile_PR_IR24ddn2 >& err
+
+#How many surving read pairs are there?
+#
+egrep -c "^>" *fa
+egrep "^Input Read Pairs" err
+# ... checks out!
+
+#Let's check that the sum total of IR24ddn-mergedreads* entries is what we expect:
+#
+wc -l IR24ddn2-mergedreads*
+# ... checks out!
+
+make -f Makefile_PR_IR24ddn2 cleanup

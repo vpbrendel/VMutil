@@ -4,3 +4,5 @@ PATH=$PATH:/usr/local/src/MoVRs/WEBLOGO/weblogo
 PATH=$PATH:/usr/local/src/MoVRs/MEME/meme_4.12.0/bin
 PATH=$PATH:/usr/local/src/MoVRs/HOMER/bin
 PATH=$PATH:/usr/local/src/MoVRs/MoVRs/scripts
+
+source /usr/local/src/TRegGA/PAGIT/PAGIT/sourceme.pagit

@@ -18,12 +18,15 @@ apt-get install libpango1.0 libpango1.0-dev
 apt-get install libgtextutils0 libgtextutils-dev
 apt-get install libjemalloc-dev
 apt-get install libssl-dev
+apt-get install libtbb-dev
 apt-get install libtool
 apt-get install libxml2-dev
 apt-get install parallel
+apt-get build-dep python-biopython
 apt-get install python-cairo python-gi-cairo
 apt-get install python-dev python-pip
 apt-get install python-matplotlib python-numpy python-scipy
+apt-get install ipython python-pandas python-sympy python-nose
 apt-get install python-pydot graphviz  
 apt-get install zip
 apt-get install zlib1g-dev

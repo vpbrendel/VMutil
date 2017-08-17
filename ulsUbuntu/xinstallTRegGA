@@ -1,0 +1,96 @@
+#!/bin/bash
+mkdir TRegGA
+cd TRegGA
+
+
+#AlignGraph
+	git clone https://github.com/baoe/AlignGraph.git
+	cd AlignGraph/
+	\cp AlignGraph/AlignGraph Eval-AlignGraph/Eval-AlignGraph /usr/local/bin/
+	cd ..
+
+#BOWTIE
+	git clone https://github.com/BenLangmead/bowtie.git
+	cd bowtie
+	make
+	\cp bowtie bowtie-align-l bowtie-align-s bowtie-build bowtie-build-l bowtie-build-s bowtie-inspect bowtie-inspect-l bowtie-inspect-s /usr/local/bin/
+	cd ..
+
+##BOWTIE2
+
+#BWA
+	mkdir BWA
+	cd BWA
+	wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.16a.tar.bz2/download
+	mv download bwa-0.7.16a.tar.bz2
+	tar -xjf bwa-0.7.16a.tar.bz2
+	cd bwa-0.7.16a/
+	make
+	cp bwa /usr/local/bin/
+	cd ../..
+
+##FASTQC
+
+#GAPFILLER
+#	from http://www.baseclear.com/genomics/bioinformatics/basetools/gapfiller
+#	via license agreement download
+#	some changes made in code
+#	GapFiller.pl installed under /usr/local/bin
+#	Last update:	July 5, 2015
+
+#KmerGenie
+	mkdir KmerGenie
+	cd KmerGenie
+ 	wget http://kmergenie.bx.psu.edu/kmergenie-1.7023.tar.gz
+ 	tar -xzf kmergenie-1.7023.tar.gz 
+ 	cd kmergenie-1.7023/
+	sed -i ntCard/Makefile -e "s/Wall/Wl,--no-as-needed/"
+ 	make
+	make install
+	cd ../..
+
+#NGSUtils
+ 	git clone git://github.com/ngsutils/ngsutils.git
+ 	cd ngsutils/
+ 	make
+ 	cd bin
+ 	\cp * /usr/local/bin
+ 	cd ../..
+
+#PAGIT
+	mkdir PAGIT
+	cd PAGIT
+ 	wget ftp://ftp.sanger.ac.uk/pub/resources/software/pagit/PAGIT.V1.64bit.tgz
+ 	tar -xzf PAGIT.V1.64bit.tgz 
+ 	bash ./installme.sh 
+	cd ..
+
+#QUAST
+	mkdir QUAST
+	cd QUAST
+	wget https://downloads.sourceforge.net/project/quast/quast-4.5.tar.gz
+	tar -xzf quast-4.5.tar.gz
+	cd quast-4.5
+ 	python quast.py --test --threads 2
+	cd ../..
+
+##SAMTOOLS
+
+#SOAPdenovo2
+	git clone https://github.com/aquaskyline/SOAPdenovo2
+	cd SOAPdenovo2/
+	make
+	chmod a+x *mer
+	cp *mer /usr/local/bin
+	make clean
+	cd ..
+
+##SRATOOLKIT
+
+#TRIMMOMATIC
+	mkdir TRIMMOMATIC
+	cd TRIMMOMATIC
+ 	wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip
+ 	unzip Trimmomatic-0.36.zip
+#	Use:	java -jar /usr/local/src/TRegRA/TRIMMOMATIC/Trimmomatic-0.36/trimmomatic-0.36.jar
+	cd ..
