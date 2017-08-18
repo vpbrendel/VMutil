@@ -1,0 +1,50 @@
+#!/bin/bash
+mkdir code4Rice3K
+cd code4Rice3K
+
+#code4Rice3K
+	git clone https://github.com/BrendelGroup/Code4Rice3K
+
+#BCFTOOLS
+	mkdir BCFTOOLS
+	cd BCFTOOLS
+	wget https://github.com/samtools/bcftools/releases/download/1.5/bcftools-1.5.tar.bz2  
+	tar xjf bcftools-1.5.tar.bz2
+	cd bcftools-1.5/
+	./configure
+	make
+	make install
+	cd ../..
+
+#TABIX
+	mkdir TABIX
+	cd TABIX
+	wget https://sourceforge.net/projects/samtools/files/tabix/tabix-0.2.6.tar.bz2  
+	tar xjf tabix-0.2.6.tar.bz2
+	cd tabix-0.2.6
+	make
+	cp tabix bgzip /usr/local/bin/
+	cd ../..
+
+#VCFTOOLS
+	mkdir VCFTOOLS
+	cd VCFTOOLS
+	wget https://sourceforge.net/projects/vcftools/files/vcftools_0.1.13.tar.gz  
+	tar zxf vcftools_0.1.13.tar.gz
+	cd vcftools_0.1.13 
+	make
+	cp bin/* /usr/local/bin/
+	cd ../..
+
+#RAxML
+	mkdir RAxML
+	cd RAxML
+	git clone https://github.com/stamatak/standard-RAxML.git
+	cd standard-RAxML/
+	make -f Makefile.PTHREADS.gcc
+	rm *.o
+	cp raxmlHPC-PTHREADS /usr/local/bin/
+	cd ../../
+
+#ELSE
+#pip install --upgrade pyvcf
