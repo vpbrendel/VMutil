@@ -22,7 +22,7 @@ apt-get install libtbb-dev
 apt-get install libtool
 apt-get install libxml2-dev
 apt-get install parallel
-apt-get build-dep python-biopython
+apt-get install python-biopython
 apt-get install python-cairo python-gi-cairo
 apt-get install python-dev python-pip
 apt-get install python-matplotlib python-numpy python-scipy
