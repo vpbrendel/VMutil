@@ -1,2 +1,3 @@
 sudo cp ~vbrendel/VMutil/bgRAMOSE-specific/motd.bgRAMOSE /etc/
-sudo cp ~vbrendel/VMutil/bgRAMOSE-specific/usrlocalshare /usr/local/share/bgRAMOSE
+sudo cp ~vbrendel/VMutil/bgRAMOSE-specific/usrlocalshare /usr/local/share/bgRAMOSE/
+sudo cp ~vbrendel/VMutil/bgRAMOSE-specific/DDNscripts /usr/local/src/NGS_DIR/

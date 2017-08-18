@@ -1,0 +1,22 @@
+#!/bin/bash
+
+label="$1"
+
+cat DIR*/goodreads_1.fq > ${label}gr_1.fq
+cat DIR*/goodreads_2.fq > ${label}gr_2.fq
+cat DIR*/discard_1.fq   > ${label}nu_1.fq
+cat DIR*/discard_2.fq   > ${label}nu_2.fq
+
+x=`cat ${label}gr_1.fq | wc -l`
+y=$(($x/4))
+echo "Number of good reads is:	$y"
+x=`cat ${label}nu_1.fq | wc -l`
+z=$(($x/4))
+echo "Number of discarded reads is:	$z"
+
+echo ""
+t=$(($y + $z))
+echo "Total number of reads:	$t"
+x=`cat ${label}_1.fq | wc -l`
+y=$(($x/4))
+echo "Check (${label}):	$y"
