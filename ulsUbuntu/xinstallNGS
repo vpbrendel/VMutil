@@ -3,6 +3,9 @@ mkdir NGS_DIR
 cd NGS_DIR
 
 
+#ABYSS
+	apt-get install abyss
+
 #Discovar
 	mkdir Discovar
 	cd Discovar/

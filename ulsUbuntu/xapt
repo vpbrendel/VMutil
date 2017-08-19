@@ -11,6 +11,7 @@ apt-file update
 #Install necessary packages:
 #
 apt-get install git
+apt-get install libboost-all-dev
 apt-get install libcairo2 libcairo2-dev
 apt-get install libcurl4-openssl-dev
 apt-get install libncurses5 libncurses5-dev
@@ -22,6 +23,7 @@ apt-get install libssl-dev
 apt-get install libtbb-dev
 apt-get install libtool
 apt-get install libxml2-dev
+apt-get install openmpi-bin openmpi-doc libopenmpi-dev
 apt-get install parallel
 apt-get install python-biopython
 apt-get install python-cairo python-gi-cairo

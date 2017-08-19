@@ -80,8 +80,7 @@ cd TRegGA
 	git clone https://github.com/aquaskyline/SOAPdenovo2
 	cd SOAPdenovo2/
 	make
-	chmod a+x *mer
-	cp *mer /usr/local/bin
+	cp SOAP* /usr/local/bin
 	make clean
 	cd ..
 

@@ -1,8 +1,19 @@
 PATH=$PATH:/usr/local/src/BWASP/SRATOOLKIT/sratoolkit.2.8.2-1-ubuntu64/bin
+
 PATH=/usr/local/src/anaconda2/bin:$PATH
+
 PATH=$PATH:/usr/local/src/MoVRs/WEBLOGO/weblogo
 PATH=$PATH:/usr/local/src/MoVRs/MEME/meme_4.12.0/bin
 PATH=$PATH:/usr/local/src/MoVRs/HOMER/bin
 PATH=$PATH:/usr/local/src/MoVRs/MoVRs/scripts
 
+PATH=$PATH:/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin
+BSSMDIR="/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin/bssm"
+GTHDATADIR="/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin/gthdata"
+export BSSMDIR GTHDATADIR
+
+PATH=$PATH:/usr/local/src/ALN_DIR/SNAP/snap
+export ZOE=/usr/local/src/ALN_DIR/SNAP
+
 source /usr/local/src/TRegGA/PAGIT/PAGIT/sourceme.pagit
+

@@ -39,6 +39,28 @@ cd ALN_DIR
 	cp src/clustalw2 /usr/local/bin/clustalw
 	cd ../..
 
+#EXONERATE
+	mkdir EXONERATE
+	cd EXONERATE
+	wget http://ftp.ebi.ac.uk/pub/software/vertebrategenomics/exonerate/exonerate-2.2.0-x86_64.tar.gz
+	tar -xzf exonerate-2.2.0-x86_64.tar.gz 
+	cd exonerate-2.2.0-x86_64
+	cd bin
+	cp * /usr/local/bin
+	cd ../../..
+
+#GTH
+	mkdir GTH
+	cd GTH
+	wget http://genomethreader.org/distributions/gth-1.6.6-Linux_x86_64-64bit.tar.gz
+	tar -xzf gth-1.6.6-Linux_x86_64-64bit.tar.gz 
+	cd gth-1.6.6-Linux_x86_64-64bit
+	cd bin
+##note: To use gth, the user will have to get a licence file from http://genomethreader.org/cgi-bin/download.cgi
+##      and either put the file into their home directory or replace the following symbolic link:
+	ln -s ~/gth.lic ./
+	cd ../../..
+
 #HMMER
 	mkdir HMMER
 	cd HMMER
@@ -91,6 +113,13 @@ cd ALN_DIR
 #SEE:	documents in orthomclSoftware-v2.0.9/doc/OrthoMCLEngine/Main
 #		sudo apt-get install mysql-server
 #		sudo mysql_secure_installation
+	cd ..
+
+#SNAP
+	mkdir SNAP
+	cd SNAP
+	wget http://korflab.ucdavis.edu/Software/snap-2013-11-29.tar.gz
+	tar -xzf snap-2013-11-29.tar.gz 
 	cd ..
 
 #VMATCH
