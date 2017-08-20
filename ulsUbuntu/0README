@@ -9,8 +9,12 @@ apt-get update
 
 Rscript R2install
 
+xinstallALN
 xinstallBWASP
+xinstallCode4Rice3K
 xinstallGoRAMPAGE
 xinstallMoVRs
+xinstallNGS
+xinstallTRegGA
 
 # When all is done, add the contents of paths2add to ~/.profile

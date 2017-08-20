@@ -11,6 +11,48 @@ BASH_ENV=$HOME/.bashrc
 # DEFAULT PATH:
 #	/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 PATH=.:$PATH:$HOME/bin:$HOME/fct
+#######
+#Add these lines to your ~/.profile file, then source ~/.profile to add paths
+#  to installed programs.
+#
+
+#Needed to use sratoolkit functions:
+#
+PATH=$PATH:/usr/local/src/BWASP/SRATOOLKIT/sratoolkit.2.8.2-1-ubuntu64/bin
+
+#Needed to use MoVRs workflow components:
+#
+PATH=$PATH:/usr/local/src/MoVRs/WEBLOGO/weblogo
+PATH=$PATH:/usr/local/src/MoVRs/MEME/meme_4.12.0/bin
+PATH=$PATH:/usr/local/src/MoVRs/HOMER/bin
+PATH=$PATH:/usr/local/src/MoVRs/MoVRs/scripts
+
+#Needed to use Genomethreader:
+#
+PATH=$PATH:/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin
+BSSMDIR="/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin/bssm"
+GTHDATADIR="/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin/gthdata"
+export BSSMDIR GTHDATADIR
+
+#Needed to use snap:
+#
+PATH=$PATH:/usr/local/src/ALN_DIR/SNAP/snap
+export ZOE=/usr/local/src/ALN_DIR/SNAP
+
+#Needed to use vcftools:
+#
+export PERL5LIB=${PERL5LIB}:/usr/local/src/code4Rice3K/VCFTOOLS/vcftools_0.1.13/perl
+
+
+#Uncomment the following if you want to use the /usr/local/src/ananconda2
+#  python environment:
+#PATH=/usr/local/src/anaconda2/bin:$PATH
+
+#Uncomment the following if you want to run the TRegGA workflow:
+#
+source /usr/local/src/TRegGA/PAGIT/PAGIT/sourceme.pagit
+
+#######
 
 USERNAME="vbrendel"
 

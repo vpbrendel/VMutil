@@ -16,6 +16,19 @@ cd code4Rice3K
 	make install
 	cd ../..
 
+#Figtree
+#	from http://tree.bio.ed.ac.uk/software/figtree/
+	mkdir FigTree
+	cd FigTree
+	cp ~vbrendel/Downloads/FigTree_v1.4.3.tgz ./
+	tar -xzf FigTree_v1.4.3.tgz 
+	cd FigTree_v1.4.3
+	cd bin
+	sed -i -e "s#lib#/usr/local/src/code4Rice3K/FigTree/FigTree_v1.4.3/lib#" figtree 
+	chmod a+x figtree
+	cp figtree /usr/local/bin
+	cd ../../..
+
 #TABIX
 	mkdir TABIX
 	cd TABIX
