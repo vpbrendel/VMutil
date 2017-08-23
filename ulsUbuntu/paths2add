@@ -37,6 +37,6 @@ export PERL5LIB=${PERL5LIB}:/usr/local/src/code4Rice3K/VCFTOOLS/vcftools_0.1.13/
 
 #Uncomment the following if you want to run the TRegGA workflow:
 #
-source /usr/local/src/TRegGA/PAGIT/PAGIT/sourceme.pagit
+#source /usr/local/src/TRegGA/PAGIT/PAGIT/sourceme.pagit
 
 #######
