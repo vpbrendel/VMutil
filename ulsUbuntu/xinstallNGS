@@ -35,3 +35,14 @@ cd NGS_DIR
 	cd Picard
 	wget https://github.com/broadinstitute/picard/releases/download/2.10.9/picard.jar
 	cd ..
+
+#SRAssembler
+	git clone https://github.com/BrendelGroup/SRAssembler
+	cd SRAssembler/
+	cd src
+	make
+	make clean
+	make mpi
+	make clean
+	make install
+	cd ../..

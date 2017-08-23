@@ -49,6 +49,21 @@ cd ALN_DIR
 	cp * /usr/local/bin
 	cd ../../..
 
+#GENESEQER
+	mkdir GENESEQER
+	cd GENESEQER
+	git clone https://github.com/brendelgroup/GeneSeqer
+	cd GeneSeqer/
+	cd src
+	make linux
+	make clean
+	cp makefile.lnxMPI makefile.lnxMPIorig
+	sed -e "s/^#MPICC/MPICC/" makefile.lnxMPI | sed -e "0,/^MPICC/s/^MPICC/#MPICC/" > makefile.lnxMPIu
+	make -f makefile.lnxMPIu
+	make clean
+	make install
+	cd ../../..
+
 #GTH
 	mkdir GTH
 	cd GTH
