@@ -13,7 +13,6 @@ apt-file update
 apt-get install git
 apt-get install libboost-all-dev
 apt-get install libcairo2 libcairo2-dev
-apt-get install libcurl4-gnutls-dev
 apt-get install libcurl4-openssl-dev
 apt-get install libncurses5 libncurses5-dev
 apt-get install libncursesw5-dev
@@ -40,6 +39,15 @@ apt-get update && apt-get install oracle-java8-installer
 java -version
 ln -s /usr/lib/jvm/java-8-oracle/ /usr/lib/jvm/default-java
 
+cat CRANmirror >> /etc/apt/sources.list
+add-apt-repository ppa:marutter/c2d4u
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+apt-get update && apt-get install r-base-core
+apt-get update && apt-get install r-base-dev
+R --version
+R CMD javareconf
+
 apt-add-repository ppa:brightbox/ruby-ng
 apt-get update && apt-get install ruby2.4
 ruby --version
@@ -50,16 +58,6 @@ apt-get install cpanminus
 apt-get install eog
 apt-get install evince
 apt-get install gksu
-
-#Installing current R and overall upgrade:
-#
-apt install r-base-core r-base-dev
-R --version
-add-apt-repository ppa:marutter/rrutter
-apt update
-apt full-upgrade
-R --version
-R CMD javareconf
 
 #Overall update:
 #

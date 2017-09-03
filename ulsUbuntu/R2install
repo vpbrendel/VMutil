@@ -10,9 +10,12 @@ biocLite("seqLogo")
 
 biocLite(c("genomation","methylKit"))
 
-install.packages("ggplot2")
-install.packages("gplots")
-install.packages("gridExtra")
-install.packages("pastecs")
-install.packages("sqldf")
-install.packages("venneuler")
+install.packages("devtools", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("ggplot2", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("gplots", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("gridExtra", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("pastecs", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("rJava", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("sqldf", repos="http://ftp.ussg.iu.edu/CRAN")
+export _JAVA_OPTIONS="-Xss2560k -Xmx2g"
+install.packages("venneuler", repos="http://ftp.ussg.iu.edu/CRAN")

@@ -4,6 +4,8 @@ cd /usr/local/src
 sudobash
 cp ~vbrendel/VMutil/ulsUbuntu/* ./
 xapt
+apt-get autoremove
+apt-get update
 
 Rscript R2install
 
