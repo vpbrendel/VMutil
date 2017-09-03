@@ -1,0 +1,21 @@
+#Selecting "lines" of length >=500:
+#
+ln -s IR24ddnAssembly/a.final/a.lines.fasta allIR24
+/usr/local/src/NGS_DIR/DDNscripts/splitFASTAbyLength.pl -m 500 allIR24
+mv longallIR24 IR24ddn.fa
+mv shortallIR24 shortIR24ddn.fasta
+rm allIR24 
+
+egrep -c "^>" *.fa
+#
+#Summary: 
+#
+#IR24ddn.fa:51562
+#shortIR24ddn.fasta:132486
+
+#Assembly statistics:
+#
+cat IR24ddn.fa | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > IR24ddn.stats
+cat shortIR24ddn.fasta | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > shortIR24ddn.stats
+
+makeblastdb -in IR24ddn.fa -dbtype nucl -out IR24genome -parse_seqids

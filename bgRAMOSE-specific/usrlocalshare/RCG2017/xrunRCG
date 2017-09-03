@@ -1,0 +1,22 @@
+cd IRGSSP
+source 0Record >& err
+cd ..
+
+#Complete execution of the following genome assemblies and analysis requires the
+#Genomethreader spliced alignment program.  Genomethreader is already installed on
+#this image, but you must acquire a gth.lic license file from
+#http://genomethreader.org/cgi-bin/download.cgi and place it in your home directory.
+#
+#If you prefer, you can modify the 0Record files and comment out the xgth step.
+
+cd DV86
+source 0Record >& err
+cd ..
+
+cd IR24
+source 0Record >& err
+cd ..
+
+cd IRBB7
+source 0Record >& err
+cd ..

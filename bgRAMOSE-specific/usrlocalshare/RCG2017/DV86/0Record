@@ -1,0 +1,21 @@
+cd ddn2
+source 0Record >& err
+cd ..
+
+xtally >& summary
+
+ls DV86*_1.fq > r1
+ls DV86*_2.fq > r2
+paste r1 r2 > r12
+sed -e "s#DV86#/home/vbrendel/prj/RCG/DV86/DV86#g; s/	/,/;" r12 > DV86reads.txt
+\rm r1 r2 r12
+
+xrunDDN >& err
+
+cat DV86ddnAssembly/a.final/a.lines.fasta | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > DV86ddnAssembly.stats
+
+xfinalize
+
+xgth >& gth.stats
+cleanpp.sh
+\rm *.md5

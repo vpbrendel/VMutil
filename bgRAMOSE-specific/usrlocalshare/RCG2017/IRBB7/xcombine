@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ cat ddn1/IRBB7ddn1gr_1.fq ddn21/IRBB7ddn21gr_1.fq ddn22/IRBB7ddn22gr_1.fq > IRBB7ddn_1.fq
+ cat ddn1/IRBB7ddn1gr_2.fq ddn21/IRBB7ddn21gr_2.fq ddn22/IRBB7ddn22gr_2.fq > IRBB7ddn_2.fq
+
+x=`cat IRBB7ddn_1.fq | wc -l`
+y=$(($x/4))
+echo "Number of reads_1 is:	$y"
+x=`cat IRBB7ddn_2.fq | wc -l`
+y=$(($x/4))
+echo "Number of reads_2 is:	$y"

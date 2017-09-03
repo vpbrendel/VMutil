@@ -1,0 +1,52 @@
+Welcome!
+
+Presumably, you are reading this file because you read the article
+"Rice cultivar-specific gene expression studies through integrated experimental
+and computational genomics". by R. Taylor Raborn, ..., Bing Yang, and
+Volker P. Brendel; submitted 2017. 
+
+Well, you are in the right spot.  You can reproduce bit-by-bit what we reported
+in that article by following the instructions below.  Thanks to Jetstream, you
+are on your VM with everything you need preloaded!  See the documentation in
+/usr/local/src.  You can follow our example on this VM; you can use this VM
+image to run the pre-installed code on your own data; or you can look at the
+setup instructions in /usr/local/src and learn from our experience how to set up
+the requisite programs on your own server.
+
+Can you ask for more?
+
+Ok, to reproduce the example we discussed in the paper, do the following:
+
+1) Make sure that your VM instance is at least s1.xlarge (24 CPU, 60GB RAM,
+   240GB disk).
+
+2) Attach a volume of at least 400GB to your VM instance.
+
+2) We assume the the volume is mounted as /vol_b.
+
+3) As sudo, create a directory DATA on /vol_b and give ownership to yourself.
+   This is what we like to do, but if you know what you are doing, you can set
+   up things differently of course (replace "<user>" by your user name):
+
+   cd /vol_b
+   sudo mkdir DATA
+   sudo chown <user>:<user> DATA
+
+4) cd /vol_b/DATA
+   mkdir RCG
+   cd RCG
+   cp /usr/local/share/bgRAMOSE/RCG/xrunRCG ./
+
+5) time ./xrunRCG
+
+Now go off and run a couple of marathons, enjoy a faculty meeting, or re-acquaint yourself
+with your spouse over a short vacation.
+
+Seriously:  This is really a lot of data work and will take a few days to run. More advisable
+might be to look at what the script invokes (lots of other scripts, in subdirectories) and
+just reproduce particular steps as needed.
+
+Enjoy!
+
+R. Taylor Raborn <rtraborn@indiana.edu>
+Volker P. Brendel <vbrendel@indiana.edu>

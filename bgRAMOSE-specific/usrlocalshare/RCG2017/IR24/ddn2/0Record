@@ -3,7 +3,7 @@ cd SRADIR
 scp grendel.soic.indiana.edu:/DATA/GROUP/huangcy/160722NH_DNASEQ/Sample_IR24/* ./
 cd ..
 xln
-time make -j 12 -f Makefile_PR_IR24ddn2 >& err
+time make -j 22 -f Makefile_PR_IR24ddn2 >& err
 
 #How many surving read pairs are there?
 #

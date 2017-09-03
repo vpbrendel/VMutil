@@ -1,0 +1,23 @@
+cd ddn1
+source 0Record >& err
+cd ..
+
+cd ddn2
+source 0Record >& err
+cd ..
+
+xcombine >& summary
+
+ls IR24*_1.fq > r1
+ls IR24*_2.fq > r2
+paste r1 r2 > r12
+sed -e "s#IR24#/home/vbrendel/prj/RCG/IR24/IR24#g; s/	/,/;" r12 > IR24reads.txt
+\rm r1 r2 r12
+
+xrunDDN >& err
+
+cat IR24ddnAssembly/a.final/a.lines.fasta | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > IR24ddnAssembly.stats
+
+xfinalize
+
+xgth >& gth.stats

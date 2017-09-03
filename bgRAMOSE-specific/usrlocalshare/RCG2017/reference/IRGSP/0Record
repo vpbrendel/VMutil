@@ -1,0 +1,17 @@
+wget ftp://ftp.ncbi.nih.gov/genomes/Oryza_sativa_Japonica_Group/README*
+wget ftp://ftp.ncbi.nih.gov/genomes/Oryza_sativa_Japonica_Group/Assembled_chromosomes/seq/*
+wget ftp://ftp.ncbi.nih.gov/genomes/Oryza_sativa_Japonica_Group/GFF/ref_IRGSP-1.0_top_level.gff3.gz
+wget ftp://ftp.ncbi.nih.gov/genomes/Oryza_sativa_Japonica_Group/protein/protein*.gz
+wget ftp://ftp.ncbi.nih.gov/genomes/Oryza_sativa_Japonica_Group/RNA/rna.fa.gz
+wget ftp://ftp.ncbi.nih.gov/genomes/Oryza_sativa_Japonica_Group/RNA/rna.gbk.gz
+
+gunzip *.gz
+
+sed -e "s/>gi|.*|ref|/>/" protein.fa | sed -e "s/| / /" | gt seqtransform -addstopaminos > IRGSPpep
+sed -e "s/>gi|.*|ref|/>/" rna.fa | sed -e "s/| / /" > IRGSPrna
+
+
+
+cat 39947_ref_IRGSP-1.0_chr1.fa 39947_ref_IRGSP-1.0_chr2.fa 39947_ref_IRGSP-1.0_chr3.fa 39947_ref_IRGSP-1.0_chr4.fa 39947_ref_IRGSP-1.0_chr5.fa 39947_ref_IRGSP-1.0_chr6.fa 39947_ref_IRGSP-1.0_chr7.fa 39947_ref_IRGSP-1.0_chr8.fa 39947_ref_IRGSP-1.0_chr9.fa 39947_ref_IRGSP-1.0_chr10.fa 39947_ref_IRGSP-1.0_chr11.fa 39947_ref_IRGSP-1.0_chr12.fa > IRGSPchr.fa
+
+makeblastdb -in IRGSPchr.fa -dbtype nucl -out IRGSPgenome -parse_seqids

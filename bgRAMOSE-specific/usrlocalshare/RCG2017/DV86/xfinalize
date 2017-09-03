@@ -1,0 +1,21 @@
+#Selecting "lines" of length >=500:
+#
+ln -s DV86ddnAssembly/a.final/a.lines.fasta allDV86
+/usr/local/src/NGS_DIR/DDNscripts/splitFASTAbyLength.pl -m 500 allDV86
+mv longallDV86 DV86ddn.fa
+mv shortallDV86 shortDV86ddn.fasta
+rm allDV86 
+
+egrep -c "^>" *.fa
+#
+#Summary: 
+#
+#DV86ddn.fa:51562
+#shortDV86ddn.fasta:132486
+
+#Assembly statistics:
+#
+cat DV86ddn.fa | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > DV86ddn.stats
+cat shortDV86ddn.fasta | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > shortDV86ddn.stats
+
+makeblastdb -in DV86ddn.fa -dbtype nucl -out DV86genome -parse_seqids

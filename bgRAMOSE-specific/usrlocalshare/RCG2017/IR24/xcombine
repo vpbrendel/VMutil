@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cat ddn1/IR24ddn1gr_1.fq ddn2/IR24ddn2gr_1.fq > IR24ddn_1.fq
+cat ddn1/IR24ddn1gr_2.fq ddn2/IR24ddn2gr_2.fq > IR24ddn_2.fq
+
+
+x=`cat IR24ddn_1.fq | wc -l`
+y=$(($x/4))
+echo "Number of reads_1 is:	$y"
+x=`cat IR24ddn_2.fq | wc -l`
+y=$(($x/4))
+echo "Number of reads_2 is:	$y"

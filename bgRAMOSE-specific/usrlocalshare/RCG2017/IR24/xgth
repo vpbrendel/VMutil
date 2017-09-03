@@ -1,0 +1,16 @@
+gth -genomic IR24ddn.fa -protein /home/vbrendel/prj/RCG/IRGSP/IRGSPpep -species rice                            > gth.IRGSPpepOnIR24ddn
+gth -genomic IR24ddn.fa -protein /home/vbrendel/prj/RCG/IRGSP/IRGSPpep -species rice -gff3out -skipalignmentout > gth.IRGSPpepOnIR24ddn.gff3
+echo ""
+
+n=`egrep "MATCH" gth.IRGSPpepOnIR24ddn  | wc -l`
+echo "Number of matches in gth.IRGSPpepOnIR24ddn: $n"
+echo ""
+
+egrep "MATCH" gth.IRGSPpepOnIR24ddn  | cut -f3 | sort -u | sed -e "s/\+$//;" > mp-IRGSP-IR24
+n=`wc -l mp-IRGSP-IR24`
+echo "Number of distinct IRGSPpep entries spliced aligned to IR24ddn: $n"
+echo "  (listed in file mp-IRGSP-IR24)"
+
+n=`egrep -c "^>" /home/vbrendel/prj/RCG/IRGSP/IRGSPpep`
+echo "  (out of a total of $n IRGSPpep entries)"
+echo ""

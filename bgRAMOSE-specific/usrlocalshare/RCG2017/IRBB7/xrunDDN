@@ -2,8 +2,8 @@
 
 # This script is an example of running a DISCOVAR de novo assembly.
 
-myreads=./IR24reads.txt
-target=./IR24ddnAssembly
+myreads=./IRBB7reads.txt
+target=./IRBB7ddnAssembly
 tmp=$target/tmp
 options="NUM_THREADS=22 MAX_MEM_GB=58"
 

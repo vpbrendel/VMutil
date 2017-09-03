@@ -1,0 +1,21 @@
+#Selecting "lines" of length >=500:
+#
+ln -s IRBB7ddnAssembly/a.final/a.lines.fasta allIRBB7
+/usr/local/src/NGS_DIR/DDNscripts/splitFASTAbyLength.pl -m 500 allIRBB7
+mv longallIRBB7 IRBB7ddn.fa
+mv shortallIRBB7 shortIRBB7ddn.fasta
+rm allIRBB7 
+
+egrep -c "^>" *.fa
+#
+#Summary: 
+#
+#IRBB7ddn.fa:51562
+#shortIRBB7ddn.fasta:132486
+
+#Assembly statistics:
+#
+cat IRBB7ddn.fa | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > IRBB7ddn.stats
+cat shortIRBB7ddn.fasta | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > shortIRBB7ddn.stats
+
+makeblastdb -in IRBB7ddn.fa -dbtype nucl -out IRBB7genome -parse_seqids

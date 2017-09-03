@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cp ddn2/DV86ddn2gr_1.fq DV86ddn_1.fq
+cp ddn2/DV86ddn2gr_2.fq DV86ddn_2.fq
+
+
+x=`cat DV86ddn_1.fq | wc -l`
+y=$(($x/4))
+echo "Number of reads_1 is:	$y"
+x=`cat DV86ddn_2.fq | wc -l`
+y=$(($x/4))
+echo "Number of reads_2 is:	$y"

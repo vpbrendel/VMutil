@@ -1,0 +1,29 @@
+cd ddn1
+source 0Record >& err
+cd ..
+
+cd ddn21
+source 0Record >& err
+cd ..
+
+cd ddn22
+source 0Record >& err
+cd ..
+
+xcombine >& summary
+
+ls IRBB7*_1.fq > r1
+ls IRBB7*_2.fq > r2
+paste r1 r2 > r12
+sed -e "s#IRBB7#/home/vbrendel/prj/RCG/IRBB7/IRBB7#g; s/	/,/;" r12 > IRBB7reads.txt
+\rm r1 r2 r12
+
+xrunDDN >& err
+
+cat IRBB7ddnAssembly/a.final/a.lines.fasta | perl /usr/local/src/NGS_DIR/DDNscripts/asmbleval.pl > IRBB7ddnAssembly.stats
+
+xfinalize
+
+xgth >& gth.stats
+cleanpp.sh
+\rm *.md5
