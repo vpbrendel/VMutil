@@ -29,6 +29,7 @@ apt-get install parallel
 apt-get install python-biopython
 apt-get install python-cairo python-gi-cairo
 apt-get install python-dev python-pip
+pip install --upgrade pip
 apt-get install python-matplotlib python-numpy python-scipy
 apt-get install ipython python-pandas python-sympy python-nose
 apt-get install python-pydot graphviz  

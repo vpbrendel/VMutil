@@ -5,6 +5,7 @@ sudobash
 cp ~vbrendel/VMutil/ulsUbuntu/* ./
 xapt
 
+export _JAVA_OPTIONS="-Xss2560k -Xmx2g"
 Rscript R2install
 
 xinstallALN
