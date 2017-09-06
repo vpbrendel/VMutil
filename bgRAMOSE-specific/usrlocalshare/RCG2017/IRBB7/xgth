@@ -1,5 +1,5 @@
-gth -genomic IRBB7ddn.fa -protein /home/vbrendel/prj/RCG/IRGSP/IRGSPpep -species rice                            > gth.IRGSPpepOnIRBB7ddn
-gth -genomic IRBB7ddn.fa -protein /home/vbrendel/prj/RCG/IRGSP/IRGSPpep -species rice -gff3out -skipalignmentout > gth.IRGSPpepOnIRBB7ddn.gff3
+gth -genomic IRBB7ddn.fa -protein ../reference/IRGSP/IRGSPpep -species rice                            > gth.IRGSPpepOnIRBB7ddn
+gth -genomic IRBB7ddn.fa -protein ../reference/IRGSP/IRGSPpep -species rice -gff3out -skipalignmentout > gth.IRGSPpepOnIRBB7ddn.gff3
 echo ""
 
 n=`egrep "MATCH" gth.IRGSPpepOnIRBB7ddn  | wc -l`
@@ -11,6 +11,6 @@ n=`wc -l mp-IRGSP-IRBB7`
 echo "Number of distinct IRGSPpep entries spliced aligned to IRBB7ddn: $n"
 echo "  (listed in file mp-IRGSP-IRBB7)"
 
-n=`egrep -c "^>" /home/vbrendel/prj/RCG/IRGSP/IRGSPpep`
+n=`egrep -c "^>" ../reference/IRGSP/IRGSPpep`
 echo "  (out of a total of $n IRGSPpep entries)"
 echo ""
