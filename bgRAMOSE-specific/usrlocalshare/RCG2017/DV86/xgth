@@ -1,5 +1,5 @@
-gth -genomic DV86ddn.fa -protein /home/vbrendel/prj/RCG/IRGSP/IRGSPpep -species rice                            > gth.IRGSPpepOnDV86ddn
-gth -genomic DV86ddn.fa -protein /home/vbrendel/prj/RCG/IRGSP/IRGSPpep -species rice -gff3out -skipalignmentout > gth.IRGSPpepOnDV86ddn.gff3
+gth -genomic DV86ddn.fa -protein ../reference/IRGSP/IRGSPpep -species rice                            > gth.IRGSPpepOnDV86ddn
+gth -genomic DV86ddn.fa -protein ../reference/IRGSP/IRGSPpep -species rice -gff3out -skipalignmentout > gth.IRGSPpepOnDV86ddn.gff3
 echo ""
 
 n=`egrep "MATCH" gth.IRGSPpepOnDV86ddn  | wc -l`
@@ -11,6 +11,6 @@ n=`wc -l mp-IRGSP-DV86`
 echo "Number of distinct IRGSPpep entries spliced aligned to DV86ddn: $n"
 echo "  (listed in file mp-IRGSP-DV86)"
 
-n=`egrep -c "^>" /home/vbrendel/prj/RCG/IRGSP/IRGSPpep`
+n=`egrep -c "^>" ../reference/IRGSP/IRGSPpep`
 echo "  (out of a total of $n IRGSPpep entries)"
 echo ""

@@ -1,6 +1,6 @@
-cd IRGSSP
+cd reference/IRGSP
 source 0Record >& err
-cd ..
+cd ../..
 
 #Complete execution of the following genome assemblies and analysis requires the
 #Genomethreader spliced alignment program.  Genomethreader is already installed on
