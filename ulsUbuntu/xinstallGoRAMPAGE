@@ -36,7 +36,7 @@ cd GoRAMPAGE
 	cp STAR /usr/local/bin
 	cd ../..
 
-	git clone https://github.com/GoRAMPAGE
+	git clone https://github.com/BrendelGroup/GoRAMPAGE
 	cd GoRAMPAGE
 	cd scripts
 	xcheckprerequisites
