@@ -14,7 +14,11 @@ cd NGS_DIR
 	cd discovar-52488/
 	./configure
 	make all
-	make install
+#This version of Discovar does NOT compile on Ubuntu 16.04.
+#It does compile on Ubuntu 14.04, and thus for now our approach is to compile
+#on an instance of Ubuntu 14.04, and then copy the Discovar binary to
+#/usr/local/bin here.
+#	make install
 	make clean
 	cd ../..
 
@@ -26,7 +30,11 @@ cd NGS_DIR
 	cd discovardenovo-52488/
 	./configure
 	make all
-	make install
+#This version of DiscovarDeNovo does NOT compile on Ubuntu 16.04.
+#It does compile on Ubuntu 14.04, and thus for now our approach is to compile
+#on an instance of Ubuntu 14.04, and then copy the DiscovarDeNovo binary to
+#/usr/local/bin here.
+#	make install
 	make clean
 	cd ../..
 
