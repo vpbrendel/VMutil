@@ -3,7 +3,10 @@ mkdir code4Rice3K
 cd code4Rice3K
 
 #code4Rice3K
-	git clone https://github.com/BrendelGroup/Code4Rice3K
+	git clone https://github.com/BrendelGroup/code4Rice3K
+	cd code4Rice3K
+	bin/xsetupReference
+	cd ..
 
 #BCFTOOLS
 	mkdir BCFTOOLS
@@ -16,18 +19,8 @@ cd code4Rice3K
 	make install
 	cd ../..
 
-#Figtree
-#	from http://tree.bio.ed.ac.uk/software/figtree/
-	mkdir FigTree
-	cd FigTree
-	cp ~vbrendel/Downloads/FigTree_v1.4.3.tgz ./
-	tar -xzf FigTree_v1.4.3.tgz 
-	cd FigTree_v1.4.3
-	cd bin
-	sed -i -e "s#lib#/usr/local/src/code4Rice3K/FigTree/FigTree_v1.4.3/lib#" figtree 
-	chmod a+x figtree
-	cp figtree /usr/local/bin
-	cd ../../..
+#Picard
+#... installed by xinstallNGS
 
 #TABIX
 	mkdir TABIX
@@ -49,6 +42,12 @@ cd code4Rice3K
 	cp bin/* /usr/local/bin/
 	cd ../..
 
+#GATK
+	mkdir GATK
+	cd GATK
+	wget -qO- 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.6-0-g89b7209' | tar xfj -
+	cd ..
+	
 #RAxML
 	mkdir RAxML
 	cd RAxML
@@ -59,5 +58,18 @@ cd code4Rice3K
 	cp raxmlHPC-PTHREADS /usr/local/bin/
 	cd ../../
 
+#Figtree
+#	from http://tree.bio.ed.ac.uk/software/figtree/
+	mkdir FigTree
+	cd FigTree
+	cp ~/Downloads/FigTree_v1.4.3.tgz ./
+	tar -xzf FigTree_v1.4.3.tgz 
+	cd FigTree_v1.4.3
+	cd bin
+	sed -i -e "s#lib#/usr/local/src/code4Rice3K/FigTree/FigTree_v1.4.3/lib#" figtree 
+	chmod a+x figtree
+	cp figtree /usr/local/bin
+	cd ../../..
+
 #ELSE
-#pip install --upgrade pyvcf
+	pip install --upgrade pyvcf

@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir util
+cd util
+
+
+#bioawk
+	apt-get install byacc
+	git clone https://github.com/lh3/bioawk	
+	cd bioawk/	
+	make	
+	cp bioawk maketab /usr/local/bin	
+	cd ..	
