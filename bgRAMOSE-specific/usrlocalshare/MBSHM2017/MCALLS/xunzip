@@ -1,0 +1,1 @@
+find . \( -name '*CpGhsm.mcalls.zip' -o -name '*CpGscd.mcalls.zip' \)  -exec unzip {} \; -exec \rm {} \;

@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+bindir=.
+
+study=$1
+
+\rm -rf NEW-${study}
+
+time ${bindir}/xdoit ${study} NEW-${study}
+
+diff -r NEW-${study} OUT-${study} | more

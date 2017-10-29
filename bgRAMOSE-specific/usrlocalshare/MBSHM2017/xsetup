@@ -1,0 +1,29 @@
+#!/bin/bash
+
+cp FeDATA/Fexs.gdna.fa   MCALLS/Fe/genome/
+cp FeDATA/Fexs.gff3      MCALLS/Fe/genome/
+
+cp FeDATA/NQ1_trimmed.fq   MCALLS/Fe/New/NewQueen/replicate1/NQ1_trimmed.fq
+cp FeDATA/NQ2_trimmed.fq   MCALLS/Fe/New/NewQueen/replicate2/NQ2_trimmed.fq
+cp FeDATA/NQ3_trimmed.fq   MCALLS/Fe/New/NewQueen/replicate3/NQ3_trimmed.fq
+cp FeDATA/NQ4_trimmed.fq   MCALLS/Fe/New/NewQueen/replicate4/NQ4_trimmed.fq
+cp FeDATA/NQ5_trimmed.fq   MCALLS/Fe/New/NewQueen/replicate5/NQ5_trimmed.fq
+cp FeDATA/NQ6_trimmed.fq   MCALLS/Fe/New/NewQueen/replicate6/NQ6_trimmed.fq
+cp FeDATA/NW1_trimmed.fq   MCALLS/Fe/New/NewWorker/replicate1/NW1_trimmed.fq
+cp FeDATA/NW2_trimmed.fq   MCALLS/Fe/New/NewWorker/replicate2/NW2_trimmed.fq
+cp FeDATA/NW3_trimmed.fq   MCALLS/Fe/New/NewWorker/replicate3/NW3_trimmed.fq
+cp FeDATA/NW4_trimmed.fq   MCALLS/Fe/New/NewWorker/replicate4/NW4_trimmed.fq
+cp FeDATA/NW5_trimmed.fq   MCALLS/Fe/New/NewWorker/replicate5/NW5_trimmed.fq
+cp FeDATA/NW6_trimmed.fq   MCALLS/Fe/New/NewWorker/replicate6/NW6_trimmed.fq
+cp FeDATA/OQ1_trimmed.fq   MCALLS/Fe/Old/OldQueen/replicate1/OQ1_trimmed.fq
+cp FeDATA/OQ2_trimmed.fq   MCALLS/Fe/Old/OldQueen/replicate2/OQ2_trimmed.fq
+cp FeDATA/OQ3_trimmed.fq   MCALLS/Fe/Old/OldQueen/replicate3/OQ3_trimmed.fq
+cp FeDATA/OQ4_trimmed.fq   MCALLS/Fe/Old/OldQueen/replicate4/OQ4_trimmed.fq
+cp FeDATA/OQ5_trimmed.fq   MCALLS/Fe/Old/OldQueen/replicate5/OQ5_trimmed.fq
+cp FeDATA/OW1_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate1/OW1_trimmed.fq
+cp FeDATA/OW2_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate2/OW2_trimmed.fq
+cp FeDATA/OW3_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate3/OW3_trimmed.fq
+cp FeDATA/OW4_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate4/OW4_trimmed.fq
+cp FeDATA/OW5_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate5/OW5_trimmed.fq
+cp FeDATA/OW6_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate6/OW6_trimmed.fq
+cp FeDATA/OW7_trimmed.fq   MCALLS/Fe/Old/OldWorker/replicate7/OW7_trimmed.fq

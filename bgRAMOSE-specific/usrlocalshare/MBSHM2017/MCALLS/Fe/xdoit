@@ -1,0 +1,211 @@
+#!/bin/bash
+
+
+#1. Prepare the genome:
+#
+date
+echo "Parsing the genome annotation ..."
+cd genome
+make -f Makefile_parse_GFF3_Fe >& err
+cd ..
+echo "  done with genome annotation parsing ..."
+date
+echo "Bismark genome preparation ..."
+cd New/NewQueen/replicate1
+make -f Makefile_WF1-6se_NQ1 Bisulfite_Genome >& errBSG
+cd ../../..
+echo "  done with Bismark genome preparation ..."
+
+
+#2. Run the BWASP workflow, all replicate instances simultaneously but
+#   with staggered start time to avoid overload from multiple bowtie2
+#   instances
+#
+#2.1 NewQueen samples:
+#
+echo "Analyzing NewQueen samples ..."
+cd New/NewQueen/replicate1
+date
+echo " starting on replicate1 ..."
+time make -j 4 -f Makefile_WF1-6se_NQ1 >& err &
+sleep 10m
+cd ../replicate2
+date
+echo " starting on replicate2 ..."
+time make -j 4 -f Makefile_WF1-6se_NQ2 >& err &
+sleep 10m
+cd ../replicate3
+date
+echo " starting on replicate3 ..."
+time make -j 4 -f Makefile_WF1-6se_NQ3 >& err &
+sleep 10m
+cd ../replicate4
+date
+echo " starting on replicate4 ..."
+time make -j 4 -f Makefile_WF1-6se_NQ4 >& err &
+sleep 10m
+cd ../replicate5
+date
+echo " starting on replicate5 ..."
+time make -j 4 -f Makefile_WF1-6se_NQ5 >& err &
+sleep 10m
+cd ../replicate6
+date
+echo " starting on replicate6 ..."
+time make -j 4 -f Makefile_WF1-6se_NQ6 >& err &
+cd ../../..
+wait
+echo "  done with NewQueen replicates ..."
+date
+
+# 2.11: merge the NewQueen data:
+#
+cd New/NewQueen
+time make -j 6 -f Makefile_merge_NQ >& err &
+cd ../..
+wait
+echo "  done with NewQueen merge ..."
+date
+
+
+#2.2 NewWorker samples:
+#
+echo "Analyzing NewWorker samples ..."
+cd New/NewWorker/replicate1
+date
+echo " starting on replicate1 ..."
+time make -j 4 -f Makefile_WF1-6se_NW1 >& err &
+sleep 10m
+cd ../replicate2
+date
+echo " starting on replicate2 ..."
+time make -j 4 -f Makefile_WF1-6se_NW2 >& err &
+sleep 10m
+cd ../replicate3
+date
+echo " starting on replicate3 ..."
+time make -j 4 -f Makefile_WF1-6se_NW3 >& err &
+sleep 10m
+cd ../replicate4
+date
+echo " starting on replicate4 ..."
+time make -j 4 -f Makefile_WF1-6se_NW4 >& err &
+sleep 10m
+cd ../replicate5
+date
+echo " starting on replicate5 ..."
+time make -j 4 -f Makefile_WF1-6se_NW5 >& err &
+sleep 10m
+cd ../replicate6
+date
+echo " starting on replicate6 ..."
+time make -j 4 -f Makefile_WF1-6se_NW6 >& err &
+cd ../../..
+wait
+echo "  done with NewWorker replicates ..."
+date
+
+# 2.21: merge the NewWorker data:
+#
+cd New/NewWorker
+time make -j 6 -f Makefile_merge_NW >& err &
+cd ../..
+wait
+echo "  done with NewWorker merge ..."
+date
+
+
+#2.3 OldQueen samples:
+#
+echo "Analyzing OldQueen samples ..."
+cd Old/OldQueen/replicate1
+date
+echo " starting on replicate1 ..."
+time make -j 4 -f Makefile_WF1-6se_OQ1 >& err &
+sleep 10m
+cd ../replicate2
+date
+echo " starting on replicate2 ..."
+time make -j 4 -f Makefile_WF1-6se_OQ2 >& err &
+sleep 10m
+cd ../replicate3
+date
+echo " starting on replicate3 ..."
+time make -j 4 -f Makefile_WF1-6se_OQ3 >& err &
+sleep 10m
+cd ../replicate4
+date
+echo " starting on replicate4 ..."
+time make -j 4 -f Makefile_WF1-6se_OQ4 >& err &
+sleep 10m
+cd ../replicate5
+date
+echo " starting on replicate5 ..."
+time make -j 4 -f Makefile_WF1-6se_OQ5 >& err &
+sleep 10m
+cd ../replicate6
+date
+echo " starting on replicate6 ..."
+time make -j 4 -f Makefile_WF1-6se_OQ6 >& err &
+cd ../../..
+wait
+echo "  done with OldQueen replicates ..."
+date
+
+# 2.31: merge the OldQueen data:
+#
+cd Old/OldQueen
+time make -j 6 -f Makefile_merge_OQ >& err &
+cd ../..
+wait
+echo "  done with OldQueen merge ..."
+date
+
+
+#2.4 OldWorker samples:
+#
+echo "Analyzing OldWorker samples ..."
+cd Old/OldWorker/replicate1
+date
+echo " starting on replicate1 ..."
+time make -j 4 -f Makefile_WF1-6se_OW1 >& err &
+sleep 10m
+cd ../replicate2
+date
+echo " starting on replicate2 ..."
+time make -j 4 -f Makefile_WF1-6se_OW2 >& err &
+sleep 10m
+cd ../replicate3
+date
+echo " starting on replicate3 ..."
+time make -j 4 -f Makefile_WF1-6se_OW3 >& err &
+sleep 10m
+cd ../replicate4
+date
+echo " starting on replicate4 ..."
+time make -j 4 -f Makefile_WF1-6se_OW4 >& err &
+sleep 10m
+cd ../replicate5
+date
+echo " starting on replicate5 ..."
+time make -j 4 -f Makefile_WF1-6se_OW5 >& err &
+sleep 10m
+cd ../replicate6
+date
+echo " starting on replicate6 ..."
+time make -j 4 -f Makefile_WF1-6se_OW6 >& err &
+cd ../../..
+wait
+echo "  done with OldWorker replicates ..."
+date
+
+# 2.41: merge the OldWorker data:
+#
+cd Old/OldWorker
+time make -j 6 -f Makefile_merge_OW >& err &
+cd ../..
+wait
+echo "  done with OldWorker merge ..."
+date
+
+

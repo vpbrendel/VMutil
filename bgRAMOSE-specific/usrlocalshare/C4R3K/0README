@@ -1,0 +1,49 @@
+Welcome!
+
+Presumably, you are reading this file because you read the article
+"Using RAMPAGE to identify and annotate promoters in insect genomes" by
+R. Taylor Raborn and Volker P. Brendel; Methods in Molecular Biology,
+in the press 2017.
+
+Well, you are in the right spot.  You can reproduce bit-by-bit what we reported
+in that article by following the instructions below.  Thanks to Jetstream, you
+are on your VM with everything you need preloaded!  See the documentation in
+/usr/local/src.  You can follow our example on this VM; you can use this VM
+image to run the pre-installed code on your own data; or you can look at the
+setup instructions in /usr/local/src and learn from our experience how to set up
+the requisite programs on your own server.
+
+Can you ask for more?
+
+Ok, to reproduce the example we discussed in the paper, do the following:
+
+1) Attach a volume of at least 100GB to your VM instance.
+
+2) We assume the the volume is mounted as /vol_b.
+
+3) As sudo, create a directory DATA on /vol_b and give ownership to yourself.
+   This is what we like to do, but if you know what you are doing, you can set
+   up things differently of course (replace "<user>" by your user name):
+
+   cd /vol_b
+   sudo mkdir DATA
+   sudo chown <user>:<user> DATA
+
+4) cd /vol_b/DATA
+   mkdir MMB
+   cd MMB
+   cp /usr/local/share/bgRAMOSE/MMB/xrunMMB ./
+
+5) time ./xrunMMB
+
+Now go off and run a marathon, enjoy a faculty meeting, or re-acquaint yourself
+with your spouse over lunch.
+
+Depending on download speeds, the entire workflow should finish in under 3h.
+~/ncbi will contain the data downloaded from NCBI, everything else should be in
+/vol_b/DATA/MMB.
+
+Enjoy!
+
+R. Taylor Raborn <rtraborn@indiana.edu>
+Volker P. Brendel <vbrendel@indiana.edu>

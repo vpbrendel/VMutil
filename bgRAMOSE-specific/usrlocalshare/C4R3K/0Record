@@ -1,0 +1,5 @@
+time xdemo1 >& err1
+time xdemo2 >& err2
+time xdemo3 >& err3
+time xdemo4 >& err4
+./xmktree >& errt

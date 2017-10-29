@@ -1,0 +1,1 @@
+/usr/local/src/code4Rice3K/code4Rice3K/bin/generatetree -i /usr/local/src/code4Rice3K/code4Rice3K/demo/testcultivars.txt -o output -n 6

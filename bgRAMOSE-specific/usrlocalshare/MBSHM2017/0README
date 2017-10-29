@@ -1,0 +1,44 @@
+Welcome!
+
+Presumably, you are reading this file because you read the article
+"Changes in gene methylation and expression networks accompany caste
+specialization and ageing in a social insect" genomics". by
+Claire Morandin, Volker P. Brendel, Liselotte Sundström, Heikki Helanterä &
+Alexander S. Mikheyev; submitted 2017. 
+
+Well, you are in the right spot.  You can reproduce bit-by-bit what we reported
+in that article by following the instructions below.  Thanks to Jetstream, you
+are on your VM with everything you need preloaded!  See the documentation in
+/usr/local/src.  You can follow our example on this VM; you can use this VM
+image to run the pre-installed code on your own data; or you can look at the
+setup instructions in /usr/local/src and learn from our experience how to set up
+the requisite programs on your own server.
+
+Can you ask for more?
+
+Ok, to reproduce the example we discussed in the paper, do the following:
+
+1) Make sure that your VM instance is at least s1.xlarge (24 CPU, 60GB RAM,
+   240GB disk).
+
+2) Attach a volume of at least 500GB to your VM instance.
+
+2) We assume the the volume is mounted as /vol_b.
+
+3) As sudo, create a directory DATA on /vol_b and give ownership to yourself.
+   This is what we like to do, but if you know what you are doing, you can set
+   up things differently of course (replace "<user>" by your user name):
+
+   cd /vol_b
+   sudo mkdir DATA
+   sudo chown <user>:<user> DATA
+
+4) cd /vol_b/DATA
+   cp -ra /usr/local/share/bgRAMOSE/MBSHM17 ./
+
+5) Follow the instructions in MCALLS/Fe/0README and RWORK/0README
+
+
+Enjoy!
+
+Volker P. Brendel <vbrendel@indiana.edu>

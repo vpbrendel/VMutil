@@ -1,0 +1,1 @@
+/usr/local/src/code4Rice3K/code4Rice3K/bin/generatevcf -b /usr/local/src/code4Rice3K/code4Rice3K/bamfiledir -i sample-2 -o output --nct 12 --nt 12

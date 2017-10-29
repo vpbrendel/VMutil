@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+bindir=.
+
+study=$1
+outputdir=$2
+
+Rscript --default-packages=methods,datasets,utils,grDevices,graphics,stats  ${bindir}/Rscript.BWASPR ${study} ${outputdir}   2> err-${study}

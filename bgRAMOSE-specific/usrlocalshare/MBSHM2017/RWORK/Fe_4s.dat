@@ -1,0 +1,65 @@
+# Samples from Claire Morraine (unpublished)
+# nq = new queen; oq = old queen; nw = new worker; ow = old worker
+#
+Fe	MO	newQueen	0	CpGhsm	../MCALLS/Fe/New/NewQueen/Fexs-NQ.CpGhsm.mcalls
+Fe	MO	newQueen	0	CpGscd	../MCALLS/Fe/New/NewQueen/Fexs-NQ.CpGscd.mcalls
+Fe	MO	oldQueen	0	CpGhsm	../MCALLS/Fe/Old/OldQueen/Fexs-OQ.CpGhsm.mcalls
+Fe	MO	oldQueen	0	CpGscd	../MCALLS/Fe/Old/OldQueen/Fexs-OQ.CpGscd.mcalls
+
+Fe	MO	newWorker	0	CpGhsm	../MCALLS/Fe/New/NewWorker/Fexs-NW.CpGhsm.mcalls
+Fe	MO	newWorker	0	CpGscd	../MCALLS/Fe/New/NewWorker/Fexs-NW.CpGscd.mcalls
+Fe	MO	oldWorker	0	CpGhsm	../MCALLS/Fe/Old/OldWorker/Fexs-OW.CpGhsm.mcalls
+Fe	MO	oldWorker	0	CpGscd	../MCALLS/Fe/Old/OldWorker/Fexs-OW.CpGscd.mcalls
+
+# Replicates:
+Fe	MO	newQueen	1	CpGhsm	../MCALLS/Fe/New/NewQueen/replicate1/Fexs-NQ1.CpGhsm.mcalls
+Fe	MO	newQueen	1	CpGscd	../MCALLS/Fe/New/NewQueen/replicate1/Fexs-NQ1.CpGscd.mcalls
+Fe	MO	newQueen	2	CpGhsm	../MCALLS/Fe/New/NewQueen/replicate2/Fexs-NQ2.CpGhsm.mcalls
+Fe	MO	newQueen	2	CpGscd	../MCALLS/Fe/New/NewQueen/replicate2/Fexs-NQ2.CpGscd.mcalls
+Fe	MO	newQueen	3	CpGhsm	../MCALLS/Fe/New/NewQueen/replicate3/Fexs-NQ3.CpGhsm.mcalls
+Fe	MO	newQueen	3	CpGscd	../MCALLS/Fe/New/NewQueen/replicate3/Fexs-NQ3.CpGscd.mcalls
+Fe	MO	newQueen	4	CpGhsm	../MCALLS/Fe/New/NewQueen/replicate4/Fexs-NQ4.CpGhsm.mcalls
+Fe	MO	newQueen	4	CpGscd	../MCALLS/Fe/New/NewQueen/replicate4/Fexs-NQ4.CpGscd.mcalls
+Fe	MO	newQueen	5	CpGhsm	../MCALLS/Fe/New/NewQueen/replicate5/Fexs-NQ5.CpGhsm.mcalls
+Fe	MO	newQueen	5	CpGscd	../MCALLS/Fe/New/NewQueen/replicate5/Fexs-NQ5.CpGscd.mcalls
+Fe	MO	newQueen	6	CpGhsm	../MCALLS/Fe/New/NewQueen/replicate6/Fexs-NQ6.CpGhsm.mcalls
+Fe	MO	newQueen	6	CpGscd	../MCALLS/Fe/New/NewQueen/replicate6/Fexs-NQ6.CpGscd.mcalls
+
+Fe	MO	oldQueen	1	CpGhsm	../MCALLS/Fe/Old/OldQueen/replicate1/Fexs-OQ1.CpGhsm.mcalls
+Fe	MO	oldQueen	1	CpGscd	../MCALLS/Fe/Old/OldQueen/replicate1/Fexs-OQ1.CpGscd.mcalls
+#Fe	MO	oldQueen	2	CpGhsm	../MCALLS/Fe/Old/OldQueen/replicate2/Fexs-OQ2.CpGhsm.mcalls
+#Fe	MO	oldQueen	2	CpGscd	../MCALLS/Fe/Old/OldQueen/replicate2/Fexs-OQ2.CpGscd.mcalls
+Fe	MO	oldQueen	3	CpGhsm	../MCALLS/Fe/Old/OldQueen/replicate3/Fexs-OQ3.CpGhsm.mcalls
+Fe	MO	oldQueen	3	CpGscd	../MCALLS/Fe/Old/OldQueen/replicate3/Fexs-OQ3.CpGscd.mcalls
+Fe	MO	oldQueen	4	CpGhsm	../MCALLS/Fe/Old/OldQueen/replicate4/Fexs-OQ4.CpGhsm.mcalls
+Fe	MO	oldQueen	4	CpGscd	../MCALLS/Fe/Old/OldQueen/replicate4/Fexs-OQ4.CpGscd.mcalls
+Fe	MO	oldQueen	5	CpGhsm	../MCALLS/Fe/Old/OldQueen/replicate5/Fexs-OQ5.CpGhsm.mcalls
+Fe	MO	oldQueen	5	CpGscd	../MCALLS/Fe/Old/OldQueen/replicate5/Fexs-OQ5.CpGscd.mcalls
+
+Fe	MO	newWorker	1	CpGhsm	../MCALLS/Fe/New/NewWorker/replicate1/Fexs-NW1.CpGhsm.mcalls
+Fe	MO	newWorker	1	CpGscd	../MCALLS/Fe/New/NewWorker/replicate1/Fexs-NW1.CpGscd.mcalls
+Fe	MO	newWorker	2	CpGhsm	../MCALLS/Fe/New/NewWorker/replicate2/Fexs-NW2.CpGhsm.mcalls
+Fe	MO	newWorker	2	CpGscd	../MCALLS/Fe/New/NewWorker/replicate2/Fexs-NW2.CpGscd.mcalls
+Fe	MO	newWorker	3	CpGhsm	../MCALLS/Fe/New/NewWorker/replicate3/Fexs-NW3.CpGhsm.mcalls
+Fe	MO	newWorker	3	CpGscd	../MCALLS/Fe/New/NewWorker/replicate3/Fexs-NW3.CpGscd.mcalls
+Fe	MO	newWorker	4	CpGhsm	../MCALLS/Fe/New/NewWorker/replicate4/Fexs-NW4.CpGhsm.mcalls
+Fe	MO	newWorker	4	CpGscd	../MCALLS/Fe/New/NewWorker/replicate4/Fexs-NW4.CpGscd.mcalls
+Fe	MO	newWorker	5	CpGhsm	../MCALLS/Fe/New/NewWorker/replicate5/Fexs-NW5.CpGhsm.mcalls
+Fe	MO	newWorker	5	CpGscd	../MCALLS/Fe/New/NewWorker/replicate5/Fexs-NW5.CpGscd.mcalls
+Fe	MO	newWorker	6	CpGhsm	../MCALLS/Fe/New/NewWorker/replicate6/Fexs-NW6.CpGhsm.mcalls
+Fe	MO	newWorker	6	CpGscd	../MCALLS/Fe/New/NewWorker/replicate6/Fexs-NW6.CpGscd.mcalls
+
+Fe	MO	oldWorker	1	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate1/Fexs-OW1.CpGhsm.mcalls
+Fe	MO	oldWorker	1	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate1/Fexs-OW1.CpGscd.mcalls
+#Fe	MO	oldWorker	2	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate2/Fexs-OW2.CpGhsm.mcalls
+#Fe	MO	oldWorker	2	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate2/Fexs-OW2.CpGscd.mcalls
+#Fe	MO	oldWorker	3	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate3/Fexs-OW3.CpGhsm.mcalls
+#Fe	MO	oldWorker	3	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate3/Fexs-OW3.CpGscd.mcalls
+Fe	MO	oldWorker	4	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate4/Fexs-OW4.CpGhsm.mcalls
+Fe	MO	oldWorker	4	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate4/Fexs-OW4.CpGscd.mcalls
+Fe	MO	oldWorker	5	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate5/Fexs-OW5.CpGhsm.mcalls
+Fe	MO	oldWorker	5	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate5/Fexs-OW5.CpGscd.mcalls
+Fe	MO	oldWorker	6	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate6/Fexs-OW6.CpGhsm.mcalls
+Fe	MO	oldWorker	6	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate6/Fexs-OW6.CpGscd.mcalls
+Fe	MO	oldWorker	7	CpGhsm	../MCALLS/Fe/Old/OldWorker/replicate7/Fexs-OW7.CpGhsm.mcalls
+Fe	MO	oldWorker	7	CpGscd	../MCALLS/Fe/Old/OldWorker/replicate7/Fexs-OW7.CpGscd.mcalls
