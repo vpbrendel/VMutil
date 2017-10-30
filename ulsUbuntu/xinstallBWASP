@@ -4,18 +4,18 @@ cd BWASP
 
 
 	mkdir BISMARK; cd BISMARK
-	wget http://www.bioinformatics.babraham.ac.uk/projects/bismark/bismark_v0.18.1.tar.gz
-	tar -xzf bismark_v0.18.1.tar.gz
-	cd bismark_v0.18.1/
+	wget http://www.bioinformatics.babraham.ac.uk/projects/bismark/bismark_v0.19.0.tar.gz
+	tar -xzf bismark_v0.19.0.tar.gz
+	cd bismark_v0.19.0/
  	cp bam2nuc bismark bismark2* bismark_genome_preparation bismark_methylation_extractor coverage2cytosine deduplicate_bismark /usr/local/bin/
 	cd ../..
 
 	mkdir BOWTIE2; cd BOWTIE2
-	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.2/bowtie2-2.3.2-linux-x86_64.zip/download
-	mv download bowtie2-2.3.2-linux-x86_64.zip
-	unzip bowtie2-2.3.2-linux-x86_64.zip
-	cd bowtie2-2.3.2/
- 	cp bowtie2* /usr/local/bin/
+	wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.3/bowtie2-2.3.3-linux-x86_64.zip/download
+	mv download bowtie2-2.3.3-linux-x86_64.zip
+	unzip bowtie2-2.3.3-linux-x86_64.zip
+	cd bowtie2-2.3.3/
+ 	cp bowtie2* /us3/local/bin/
 	cd ../..
 
 	mkdir FASTQC; cd FASTQC
@@ -65,6 +65,7 @@ cd BWASP
 	git clone https://github.com/brendelgroup/BWASP
 	cd BWASP/bin
 	cp ../../AEGeAn/bin/canon-gff3 ../../AEGeAn/bin/pmrna ./
+	cp ../../BISMARK/bismark_v0.19.0/bismark2bedGraph ./
 	cpanm Math::Pari
 	xcheckprerequisites
 	cd ../..
