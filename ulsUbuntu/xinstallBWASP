@@ -15,7 +15,7 @@ cd BWASP
 	mv download bowtie2-2.3.3-linux-x86_64.zip
 	unzip bowtie2-2.3.3-linux-x86_64.zip
 	cd bowtie2-2.3.3/
- 	cp bowtie2* /us3/local/bin/
+ 	cp bowtie2* /usr/local/bin/
 	cd ../..
 
 	mkdir FASTQC; cd FASTQC
