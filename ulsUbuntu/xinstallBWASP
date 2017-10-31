@@ -4,6 +4,8 @@ cd BWASP
 
 
 	mkdir BISMARK; cd BISMARK
+	apt-get install libgd-dev
+	cpanm GD::Graph::lines
 	wget http://www.bioinformatics.babraham.ac.uk/projects/bismark/bismark_v0.19.0.tar.gz
 	tar -xzf bismark_v0.19.0.tar.gz
 	mv Bismark_v0.19.0   bismark_v0.19.0
