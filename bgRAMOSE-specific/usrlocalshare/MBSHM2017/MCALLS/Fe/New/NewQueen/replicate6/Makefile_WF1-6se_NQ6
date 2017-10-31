@@ -1,11 +1,11 @@
 #Makefile_WF1-6se_template - Modified to work with RRBS input data that are already adapter and quality
-#                            trimmed (see MODIFICATION tags below).  Version: October 28, 2017.
+#                            trimmed (see MODIFICATION tags below).  Version: October 31, 2017.
 #
 #Makefile for BWASP workflow steps 1-6, from downloading SRA data to the Creport and methylation calls.
 #Labeling of steps follows Figs. 1 & 2 in the manuscript.
 #
 #This is the single-read version.  For paired-read analysis, use Makefile_WF1-6pe_template.
-#Version: October 28, 2017.
+#Version: October 31, 2017.
 #
 #Note:	This version requires the BWASP repository bismark_methylation_extractor (until BISMARK gets updated).
 #       You will also need to place a copy of bismark2bedGraph into the BWASP/bin directory.
@@ -71,9 +71,9 @@ TRIM_GALORE = $(SRCDIR)/TRIM_GALORE
 BOWTIE2_OPTIONS       = -p 2 --score_min L,0,-0.6
 BISMARK_OPTIONS       = --multicore 10  --path_to_bowtie $(BOWTIE2) --bowtie2 $(BOWTIE2_OPTIONS) --samtools_path $(SAMTOOLS)/samtools
 FASTQC_OPTIONS        = --threads 2  --extract
-SAMTOOLS_SORT_OPTIONS = -m 25G -@ 4
+SAMTOOLS_SORT_OPTIONS = -m 10G -@ 4
 TRIM_GALORE_OPTIONS   = 
-SORT_BUFFER_SIZE      = 20G
+SORT_BUFFER_SIZE      = 10G
 BME_OPTIONS           = --multicore 10  --buffer_size $(SORT_BUFFER_SIZE)
 #
 ### ! Note: The --phred33/64 option to trim_galore is set below according to the output of FastQC
