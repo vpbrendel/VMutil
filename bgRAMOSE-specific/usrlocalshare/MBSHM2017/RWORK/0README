@@ -1,14 +1,17 @@
 The BWASPR analyses use the BWASP workflow generated *.mcalls methylation call
-files in the ../MCALLS/Fe/Old and New subdirectories.  To work with the files we
-used in the paper, run the xrunzip script in the ../MCALLS/Fe directory to
-unzip all these files.
+files in the ../MCALLS/Fe/Emerging and Old subdirectories.  To work with the
+files we used in the paper, first run the xunzip script in the ../MCALLS
+directory to unzip all these files.
 
 If you wish to reproduce the *.mcalls files, please follow the instructions in
 ../MCALLS/0README.
 
 If you wish to reproduce the entire BWASPR analysis, you first need to retrieve
-the original genome data (for now using the ../xsetup script after you
-downloaded the FeDATA directory from IU Box to your home directory on this VM.)
+the original genome data. For now use the ../xsetup script after you
+downloaded the FeDATA directory from IU Box to your home directory on this VM:
+	(cd ../; head -4 ./xsetup | bash; cd RWORK)
+You will also need to parse the annotation like this:
+	(cd ../MCALLS/Fe/genome; make -f Makefile_parse_GFF3_Fe >& err; cd ../../../RWORK)
 
 To run the BWASPR analysis with our chosen paramenters, execute
 	./xdoit Fe_4s OUT-Fe_4s >& err

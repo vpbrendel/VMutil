@@ -1,20 +1,20 @@
 #!/bin/bash
 
-cd New/NewQueen/replicate1/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewQueen/replicate2/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewQueen/replicate3/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewQueen/replicate4/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewQueen/replicate5/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewQueen/replicate6/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewQueen/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../
+cd Emerging/EmergingQueen/replicate1/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingQueen/replicate2/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingQueen/replicate3/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingQueen/replicate4/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingQueen/replicate5/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingQueen/replicate6/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingQueen/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../
 
-cd New/NewWorker/replicate1/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewWorker/replicate2/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewWorker/replicate3/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewWorker/replicate4/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewWorker/replicate5/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewWorker/replicate6/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
-cd New/NewWorker/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../
+cd Emerging/EmergingWorker/replicate1/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingWorker/replicate2/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingWorker/replicate3/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingWorker/replicate4/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingWorker/replicate5/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingWorker/replicate6/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
+cd Emerging/EmergingWorker/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../
 
 cd Old/OldQueen/replicate1/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../
 cd Old/OldQueen/replicate2/; make -f Makefile* cleanup; make -f Makefile* finishup; cd ../../../

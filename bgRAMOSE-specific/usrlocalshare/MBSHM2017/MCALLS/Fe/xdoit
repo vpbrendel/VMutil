@@ -11,8 +11,8 @@ cd ..
 echo "  done with genome annotation parsing ..."
 date
 echo "Bismark genome preparation ..."
-cd New/NewQueen/replicate1
-make -f Makefile_WF1-6se_NQ1 Bisulfite_Genome >& errBSG
+cd Emerging/EmergingQueen/replicate1
+make -f Makefile_WF1-6se_EQ1 Bisulfite_Genome >& errBSG
 cd ../../..
 echo "  done with Bismark genome preparation ..."
 
@@ -21,97 +21,97 @@ echo "  done with Bismark genome preparation ..."
 #   with staggered start time to avoid overload from multiple bowtie2
 #   instances
 #
-#2.1 NewQueen samples:
+#2.1 EmergingQueen samples:
 #
-echo "Analyzing NewQueen samples ..."
-cd New/NewQueen/replicate1
+echo "Analyzing EmergingQueen samples ..."
+cd Emerging/EmergingQueen/replicate1
 date
 echo " starting on replicate1 ..."
-time make -j 4 -f Makefile_WF1-6se_NQ1 >& err &
+time make -j 4 -f Makefile_WF1-6se_EQ1 >& err &
 sleep 10m
 cd ../replicate2
 date
 echo " starting on replicate2 ..."
-time make -j 4 -f Makefile_WF1-6se_NQ2 >& err &
+time make -j 4 -f Makefile_WF1-6se_EQ2 >& err &
 sleep 10m
 cd ../replicate3
 date
 echo " starting on replicate3 ..."
-time make -j 4 -f Makefile_WF1-6se_NQ3 >& err &
+time make -j 4 -f Makefile_WF1-6se_EQ3 >& err &
 sleep 10m
 cd ../replicate4
 date
 echo " starting on replicate4 ..."
-time make -j 4 -f Makefile_WF1-6se_NQ4 >& err &
+time make -j 4 -f Makefile_WF1-6se_EQ4 >& err &
 sleep 10m
 cd ../replicate5
 date
 echo " starting on replicate5 ..."
-time make -j 4 -f Makefile_WF1-6se_NQ5 >& err &
+time make -j 4 -f Makefile_WF1-6se_EQ5 >& err &
 sleep 10m
 cd ../replicate6
 date
 echo " starting on replicate6 ..."
-time make -j 4 -f Makefile_WF1-6se_NQ6 >& err &
+time make -j 4 -f Makefile_WF1-6se_EQ6 >& err &
 cd ../../..
 wait
-echo "  done with NewQueen replicates ..."
+echo "  done with EmergingQueen replicates ..."
 date
 
-# 2.11: merge the NewQueen data:
+# 2.11: merge the EmergingQueen data:
 #
-cd New/NewQueen
-time make -j 6 -f Makefile_merge_NQ >& err &
+cd Emerging/EmergingQueen
+time make -j 6 -f Makefile_merge_EQ >& err &
 cd ../..
 wait
-echo "  done with NewQueen merge ..."
+echo "  done with EmergingQueen merge ..."
 date
 
 
-#2.2 NewWorker samples:
+#2.2 EmergingWorker samples:
 #
-echo "Analyzing NewWorker samples ..."
-cd New/NewWorker/replicate1
+echo "Analyzing EmergingWorker samples ..."
+cd Emerging/EmergingWorker/replicate1
 date
 echo " starting on replicate1 ..."
-time make -j 4 -f Makefile_WF1-6se_NW1 >& err &
+time make -j 4 -f Makefile_WF1-6se_EW1 >& err &
 sleep 10m
 cd ../replicate2
 date
 echo " starting on replicate2 ..."
-time make -j 4 -f Makefile_WF1-6se_NW2 >& err &
+time make -j 4 -f Makefile_WF1-6se_EW2 >& err &
 sleep 10m
 cd ../replicate3
 date
 echo " starting on replicate3 ..."
-time make -j 4 -f Makefile_WF1-6se_NW3 >& err &
+time make -j 4 -f Makefile_WF1-6se_EW3 >& err &
 sleep 10m
 cd ../replicate4
 date
 echo " starting on replicate4 ..."
-time make -j 4 -f Makefile_WF1-6se_NW4 >& err &
+time make -j 4 -f Makefile_WF1-6se_EW4 >& err &
 sleep 10m
 cd ../replicate5
 date
 echo " starting on replicate5 ..."
-time make -j 4 -f Makefile_WF1-6se_NW5 >& err &
+time make -j 4 -f Makefile_WF1-6se_EW5 >& err &
 sleep 10m
 cd ../replicate6
 date
 echo " starting on replicate6 ..."
-time make -j 4 -f Makefile_WF1-6se_NW6 >& err &
+time make -j 4 -f Makefile_WF1-6se_EW6 >& err &
 cd ../../..
 wait
-echo "  done with NewWorker replicates ..."
+echo "  done with EmergingWorker replicates ..."
 date
 
-# 2.21: merge the NewWorker data:
+# 2.21: merge the EmergingWorker data:
 #
-cd New/NewWorker
-time make -j 6 -f Makefile_merge_NW >& err &
+cd Emerging/EmergingWorker
+time make -j 6 -f Makefile_merge_EW >& err &
 cd ../..
 wait
-echo "  done with NewWorker merge ..."
+echo "  done with EmergingWorker merge ..."
 date
 
 

@@ -1,4 +1,4 @@
-The New & Old directories contain the BWASP makefiles that produced the deposited
+The Emerging & Old directories contain the BWASP makefiles that produced the deposited
 *.mcalls.zip methylation calls discussed in the paper.  You can run the xrunzip
 script in the project ../ parent directory to unzip all these files and proceed
 with the BWASPR analysis in directory ../../RWORK.
@@ -13,13 +13,13 @@ calls. (There will be trivial differences in some counts relative to the deposit
 *.mcalls.zip files because of minor updates in bismark since our original work.)
 
 You should probably start with running just parts of the analysis.  For convenience,
-	./xdoitNQ >& err
-will just analyze the NewQueen data (and generate about 140 GB of output in about
+	./xdoitEQ >& err
+will just analyze the EmergingQueen data (and generate about 140 GB of output in about
 four hours).
 
 You can run the script
 	./xsavespace
 to remove temporary output files and zip up others to reduce space used.  You can
 run the space saving make commands after each replicate analysis or after the
-aggregate sample analyses, as your available disk space demands.  For the NewQueen
-data, the 145 GB NewQueen output directory gets reduced to 31 GB.
+aggregate sample analyses, as your available disk space demands.  For the EmergingQueen
+data, the 145 GB EmergingQueen output directory gets reduced to 31 GB.

@@ -1,0 +1,70 @@
+#!/bin/bash
+
+
+#1. Prepare the genome:
+#
+date
+echo "Parsing the genome annotation ..."
+cd genome
+make -f Makefile_parse_GFF3_Fe >& err
+cd ..
+echo "  done with genome annotation parsing ..."
+date
+echo "Bismark genome preparation ..."
+cd Emerging/EmergingQueen/replicate1
+make -f Makefile_WF1-6se_EQ1 Bisulfite_Genome >& errBSG
+cd ../../..
+echo "  done with Bismark genome preparation ..."
+
+
+#2. Run the BWASP workflow, all replicate instances simultaneously but
+#   with staggered start time to avoid overload from multiple bowtie2
+#   instances
+#
+#2.1 EmergingQueen samples:
+#
+echo "Analyzing EmergingQueen samples ..."
+cd Emerging/EmergingQueen/replicate1
+date
+echo " starting on replicate1 ..."
+time make -j 4 -f Makefile_WF1-6se_EQ1 >& err &
+sleep 10m
+cd ../replicate2
+date
+echo " starting on replicate2 ..."
+time make -j 4 -f Makefile_WF1-6se_EQ2 >& err &
+sleep 10m
+cd ../replicate3
+date
+echo " starting on replicate3 ..."
+time make -j 4 -f Makefile_WF1-6se_EQ3 >& err &
+sleep 10m
+cd ../replicate4
+date
+echo " starting on replicate4 ..."
+time make -j 4 -f Makefile_WF1-6se_EQ4 >& err &
+sleep 10m
+cd ../replicate5
+date
+echo " starting on replicate5 ..."
+time make -j 4 -f Makefile_WF1-6se_EQ5 >& err &
+sleep 10m
+cd ../replicate6
+date
+echo " starting on replicate6 ..."
+time make -j 4 -f Makefile_WF1-6se_EQ6 >& err &
+cd ../../..
+wait
+echo "  done with EmergingQueen replicates ..."
+date
+
+# 2.11: merge the EmergingQueen data:
+#
+cd Emerging/EmergingQueen
+time make -j 6 -f Makefile_merge_EQ >& err &
+cd ../..
+wait
+echo "  done with EmergingQueen merge ..."
+date
+
+
