@@ -23,3 +23,12 @@ to remove temporary output files and zip up others to reduce space used.  You ca
 run the space saving make commands after each replicate analysis or after the
 aggregate sample analyses, as your available disk space demands.  For the EmergingQueen
 data, the 145 GB EmergingQueen output directory gets reduced to 31 GB.
+
+You should always check the error files in the subdirectories for any problems with
+executing the workflow.  If the folllowing command gives 24 *mstats files with 44 lines
+each, probably everything was ok:
+	wc -l */*/*mstats */*/rep*/*mstats
+Also
+	./xcheck
+could be run to invoke the make commands again - the output should say that there is
+nothing to be done (otherwise, the command will do it!).
