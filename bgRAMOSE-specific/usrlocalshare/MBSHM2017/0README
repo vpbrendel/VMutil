@@ -18,10 +18,10 @@ Can you ask for more?
 
 Ok, to reproduce the example we discussed in the paper, do the following:
 
-1) Make sure that your VM instance is at least s1.xlarge (24 CPU, 60GB RAM,
-   240GB disk).
+1) Make sure that your VM instance is at least m1.xlarge (24 CPU, 60GB RAM,
+   60GB disk).
 
-2) Attach a volume of at least 500GB to your VM instance.
+2) Attach a volume of at least 600GB to your VM instance.
 
 2) We assume the the volume is mounted as /vol_b.
 

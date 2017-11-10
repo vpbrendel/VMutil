@@ -4,13 +4,15 @@ script in the project ../ parent directory to unzip all these files and proceed
 with the BWASPR analysis in directory ../../RWORK.
 
 If you wish to reproduce the entire BWASP analysis, you first need to retrieve the
-original genome and read data (for now using the ../../xsetup script after you
-downloaded the FeDATA directory from IU Box to your home directory on this VM.)
-Then running the script
-	./xdoit >& err
+original genome and read data (for now, go to the ../../ parent directory and run
+the ./xsetup script after you downloaded the FeDATA directory from IU Box to your
+home directory on this VM.)
+Then, in this directory, running the script
+	time ./xdoit >& err
 should reproduce all the BWASP workflows used to generate the *.mcalls methylation
 calls. (There will be trivial differences in some counts relative to the deposited
 *.mcalls.zip files because of minor updates in bismark since our original work.)
+In our test, this took just short of 14h and used 553 Gb of disk space.
 
 You should probably start with running just parts of the analysis.  For convenience,
 	./xdoitEQ >& err
@@ -30,5 +32,6 @@ each, probably everything was ok:
 	wc -l */*/*mstats */*/rep*/*mstats
 Also
 	./xcheck
-could be run to invoke the make commands again - the output should say that there is
-nothing to be done (otherwise, the command will do it!).
+could be run to invoke the make commands again - the output files */*/errcheck and
+*/*/rep*/errcheckshould say that there is nothing to be done (otherwise, the
+command will do it!).
