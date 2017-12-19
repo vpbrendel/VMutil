@@ -1,3 +1,14 @@
+install.packages("devtools", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("ggplot2", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("gplots", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("gridExtra", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("pastecs", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("rJava", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("RMySQL")
+install.packages("sqldf", repos="http://ftp.ussg.iu.edu/CRAN")
+install.packages("venneuler", repos="http://ftp.ussg.iu.edu/CRAN")
+
+
 source("https://bioconductor.org/biocLite.R")
 biocLite(c("AnnotationHub", "BiocGenerics", "BiocParallel",
  "ENCODExplorer",  "GenomicAlignments", "GenomeInfoDb",
@@ -7,14 +18,6 @@ biocLite(c("AnnotationHub", "BiocGenerics", "BiocParallel",
 
 biocLite("TSRchitect")
 biocLite("seqLogo")
+biocLite("bumphunter")
 
 biocLite(c("genomation","methylKit"))
-
-install.packages("devtools", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("ggplot2", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("gplots", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("gridExtra", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("pastecs", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("rJava", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("sqldf", repos="http://ftp.ussg.iu.edu/CRAN")
-install.packages("venneuler", repos="http://ftp.ussg.iu.edu/CRAN")

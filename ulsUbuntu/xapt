@@ -15,6 +15,7 @@ apt-get install libboost-all-dev
 apt-get install libcairo2 libcairo2-dev
 apt-get install libcurl4-gnutls-dev
 apt-get install libcurl4-openssl-dev
+apt-get install libmariadb-client-lgpl-dev
 apt-get install libncurses5 libncurses5-dev
 apt-get install libncursesw5-dev
 apt-get install libpango1.0 libpango1.0-dev
