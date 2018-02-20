@@ -40,10 +40,10 @@ cd BWASP
 	cd ../..
 
 	mkdir SRATOOLKIT; cd SRATOOLKIT
-	wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
-	tar -xzf sratoolkit.current-ubuntu64.tar.gz
+	wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2/sratoolkit.2.8.2-ubuntu64.tar.gz
+	tar -xzf sratoolkit.2.8.2-ubuntu64.tar.gz
 	cd ..
-
+	
 	mkdir TRIM_GALORE; cd TRIM_GALORE
 	wget http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/trim_galore_v0.4.4.zip
 	unzip trim_galore_v0.4.4.zip
