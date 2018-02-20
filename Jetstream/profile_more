@@ -29,9 +29,9 @@ PATH=$PATH:/usr/local/src/MoVRs/MoVRs/scripts
 
 #Needed to use Genomethreader:
 #
-PATH=$PATH:/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin
-BSSMDIR="/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin/bssm"
-GTHDATADIR="/usr/local/src/ALN_DIR/GTH/gth-1.6.6-Linux_x86_64-64bit/bin/gthdata"
+PATH=$PATH:/usr/local/src/ALN_DIR/GTH/gth-1.7.0-Linux_x86_64-64bit/bin
+BSSMDIR="/usr/local/src/ALN_DIR/GTH/gth-1.7.0-Linux_x86_64-64bit/bin/bssm"
+GTHDATADIR="/usr/local/src/ALN_DIR/GTH/gth-1.7.0-Linux_x86_64-64bit/bin/gthdata"
 export BSSMDIR GTHDATADIR
 
 #Needed to use snap:
